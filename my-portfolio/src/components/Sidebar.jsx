@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div>
+    <div className="sidebar">
       <div className="profile">
         <img src={mypic} alt="chinedu" />
       </div>
@@ -15,7 +15,7 @@ function Sidebar() {
           </li>
         </ul>
       </div>
-    </div>
+    </div>  
   );
 }
 

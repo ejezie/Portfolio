@@ -10,7 +10,7 @@ function App() {
           <Sidebar />
         </div>
         <div className="main__body">
-          <h1>MAIN BODY</h1>
+        <div className="fade"></div>
         </div>
         <main>
           <Switch>{/* <Route exact path="/" component={Sidebar}/> */}</Switch>
