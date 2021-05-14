@@ -1,32 +1,26 @@
 .App {
   display: flex;
   color: rgb(255, 255, 255);
-  .sidebar {
+  .sidebarw {
     height: 100vh;
     width: 18%;
     background-color: rgb(24, 14, 49);
+    // border-right: 1px solid #2e344e;
   }
   .main__body {
     height: 100vh;
     width: 82%;
-    background-image: linear-gradient(
-        To left,
-        rgb(48, 28, 53, 0.8),
-        rgb(48, 28, 53, 0.8)
-      ),
-      url("../images/earth.jpg");
+    background-image: url("../images/earth.jpg");
 
-      .fade {
-        height: 100vh;
-        width: 3%;
-        background: linear-gradient(
-          to left,
-          transparent,
-          rgb(24, 14, 49),
-          rgb(24, 14, 49)
-        );
-        // background-color: red;
-      }
-      
+      // .fade {
+      //   height: 100vh;
+      //   width: 3%;
+      //   background: linear-gradient(
+      //     to left,
+      //     transparent,
+      //     rgb(24, 14, 49),
+      //     rgb(24, 14, 49)
+      //   );
+      // }   
   }
 }
