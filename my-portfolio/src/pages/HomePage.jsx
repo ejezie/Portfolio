@@ -12,6 +12,8 @@ function HomePage() {
       </div>
       <section>
         <div className="earth"></div>
+        <div className="circle">
+        </div>
       </section>
     </div>
   );

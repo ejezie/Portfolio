@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
   .hero {
     font-weight: 700;
     z-index: 1;
@@ -39,7 +40,39 @@
       height: 1600px;
       background: url(../images/flat.jpg);
       border-radius: 50%;
-      margin: 0em 25em -60em 0;
+      margin: 0em 25em -80em 0;
+      box-shadow: inset 0 0 100px rgba(0,0,0,1), 0 0 50px #29335f;
+      animation: earth 200s linear infinite;
+      background-size: cover;
+    }
+    @keyframes earth {
+      0%{
+        background-position: 0 0;
+      }
+      100%{
+        background-position: 1920px;
+      }
+    }
+    .circle{
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgb(0, 0, 0, 0);
+      transform-origin: left;
+      transform-style: preserve-3d;
+      padding: 10px;
+      transform: translateY(265deg);
+      border-radius: 50%;
+      border: solid 5px violet;
+      animation: circl 20s linear infinite;
+    }
+    @keyframes circl {
+      0%{
+        transform: perspective(1000px) rotateY(360) rotateX(15deg) translateY(-30);
+      }
+      100%{
+        transform: perspective(1000px) rotateY(360) rotateX(15deg) translateY(-30);
+      }
     }
   }
 }
