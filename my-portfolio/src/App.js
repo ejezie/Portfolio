@@ -11,7 +11,6 @@ function App() {
           <Sidebar />
         </div>
         <div className="main__body">
-          {/* <div className="fade"></div> */}
           <HomePage />
         </div>
         <main>

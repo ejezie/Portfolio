@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   .hero {
     font-weight: 700;
@@ -25,21 +26,20 @@
       }
     }
   }
-  .connect {
-    height: 40em;
-    width: 40em;
-    background-color: rgb(255, 0, 0, 0);
-    // margin-left: -10em;
-    border-radius: 100%;
-    border-top: 1px solid red;
-    animation: conn 5s infinite;
-    transform: rotateY(180deg);
-  }
-  @keyframes conn {
-      0%{
-          transform: rotate(360deg);
-      }
-      
-      
+  section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform-style: preserve-3d;
+    .earth {
+      // position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1900px;
+      height: 1600px;
+      background: url(../images/flat.jpg);
+      border-radius: 50%;
+      margin: 0em 25em -60em 0;
+    }
   }
 }
