@@ -29,6 +29,10 @@
         .link__item {
           width: 100%;
           margin: 15px 0;
+          &:hover {
+            transform: rotate(1deg);
+            box-shadow: 0 0.4rem 0.4rem rgb(0, 0, 0);
+          }
           a {
             text-decoration: none;
             color: inherit;
@@ -39,7 +43,7 @@
               content: "";
               width: 0.2em;
               height: 100%;
-              background-color: rgb(41, 51, 95,0.2);
+              background-color: rgb(41, 51, 95, 0.2);
               position: absolute;
               top: 0;
               left: 0;

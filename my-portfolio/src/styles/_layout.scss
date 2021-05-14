@@ -11,16 +11,34 @@
     height: 100vh;
     width: 82%;
     background-image: url("../images/earth.jpg");
+    animation: main_y 0.5s 0.5s infinite;
 
-      // .fade {
-      //   height: 100vh;
-      //   width: 3%;
-      //   background: linear-gradient(
-      //     to left,
-      //     transparent,
-      //     rgb(24, 14, 49),
-      //     rgb(24, 14, 49)
-      //   );
-      // }   
+    // .fade {
+    //   height: 100vh;
+    //   width: 3%;
+    //   background: linear-gradient(
+    //     to left,
+    //     transparent,
+    //     rgb(24, 14, 49),
+    //     rgb(24, 14, 49)
+    //   );
+    // }
+    @keyframes main_y {
+      0% {
+        background-color: rgb(104, 103, 103);
+      }
+      25% {
+        background-color: rgb(151, 151, 206);
+      }
+      50% {
+        background-color: rgb(86, 86, 173);
+      }
+      75% {
+        background-color: rgb(8, 8, 85);
+      }
+      100% {
+        background-color: rgb(104, 103, 103);
+      }
+    }
   }
 }
