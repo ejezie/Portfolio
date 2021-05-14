@@ -1,0 +1,45 @@
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .hero {
+    font-weight: 700;
+    z-index: 1;
+    span {
+      color: #29335f;
+    }
+    i {
+      animation: wave 1s 1s ease-in-out infinite;
+      color: #29335f;
+    }
+    @keyframes wave {
+      0% {
+        transform: rotate(15deg);
+      }
+      50% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+  .connect {
+    height: 40em;
+    width: 40em;
+    background-color: rgb(255, 0, 0, 0);
+    // margin-left: -10em;
+    border-radius: 100%;
+    border-top: 1px solid red;
+    animation: conn 5s infinite;
+    transform: rotateY(180deg);
+  }
+  @keyframes conn {
+      0%{
+          transform: rotate(360deg);
+      }
+      
+      
+  }
+}
