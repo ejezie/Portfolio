@@ -1,60 +1,76 @@
 .sidebar {
-  
   .side__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     height: 100vh;
-    .profile{
-        margin: 3%;
-        width: 100%;
-        border-bottom: 1px solid #2e344e;
-        text-align: center;
-        padding: 4%;
-        img{
-            border-radius: 100%;
-            border: 8px solid #2e344e;
-            margin-bottom: 2%;
-            object-fit: contain;
-        }
+    .profile {
+      margin: 3%;
+      width: 100%;
+      border-bottom: 1px solid #2e344e;
+      text-align: center;
+      padding: 4%;
+      img {
+        border-radius: 100%;
+        border: 8px solid #2e344e;
+        margin-bottom: 2%;
+        object-fit: contain;
+      }
     }
-    .side__links{
-        width: 100%;
-        text-align: center;
-        // text-transform: uppercase;
-        font-size: 1.3em;
-        font-weight: 300;
-        .list__links{
-            list-style: none;
-            .link__item{
-                width: 100%;
-                margin: 15px 0;
-                a{
-                    text-decoration: none;
-                    color: inherit;
-                    display: block;
-                    padding: 4px;
-                }
+    .side__links {
+      width: 100%;
+      text-align: center;
+      // text-transform: uppercase;
+      font-size: 1.2em;
+      font-weight: 300;
+      .list__links {
+        list-style: none;
+        .link__item {
+          width: 100%;
+          margin: 15px 0;
+          a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 8px;
+            position: relative;
+            &::before {
+              content: "";
+              width: 0.2em;
+              height: 100%;
+              background-color: rgb(41, 51, 95,0.2);
+              position: absolute;
+              top: 0;
+              left: 0;
+              transition: transform 0.5s ease-in-out;
+              transform-origin: left;
+              transform: scale(0);
             }
+            &:hover::before {
+              transform: scale(1);
+              width: 100%;
+            }
+          }
         }
+      }
     }
-    .footer{
-        display: flex;
-        align-items: center;
-        border-top: 1px solid #2e344e;
-        width: 100%;
-        padding: 5%;
-        p{
-           margin-left: 4px;
-           font-size: 0.8em;
-        }
-        i{
-            font-size: 0.8em;
-        }
+    .footer {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #2e344e;
+      width: 100%;
+      padding: 5%;
+      p {
+        margin-left: 4px;
+        font-size: 0.8em;
+      }
+      i {
+        font-size: 0.8em;
+      }
     }
   }
 }
-.active{
-    background-color: royalblue;
+.active {
+  background-color: #29335f;
 }
