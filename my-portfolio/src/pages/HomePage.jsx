@@ -13,9 +13,10 @@ function HomePage() {
       </div>
       <section>
         <div className="earth"></div>
-        <div className="circle">
-        </div>
+        {/* <div className="circle"> */}
+        {/* </div> */}
       </section>
+      <div className="fade"></div>
     </div>
   );
 }

@@ -35,6 +35,7 @@
     justify-content: space-around;
     align-items: center;
     transform-style: preserve-3d;
+    position: relative;
     .earth {
       // position: absolute;
       bottom: 0;
@@ -56,19 +57,19 @@
         background-position: 1920px;
       }
     }
-    .circle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgb(0, 0, 0, 0);
-      transform-origin: left;
-      transform-style: preserve-3d;
-      padding: 10px;
-      transform: translateY(265deg);
-      border-radius: 50%;
-      border: solid 5px violet;
-      animation: circl 20s linear infinite;
-    }
+    // .circle {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background: rgb(0, 0, 0, 0);
+    //   transform-origin: left;
+    //   transform-style: preserve-3d;
+    //   padding: 10px;
+    //   transform: translateY(265deg);
+    //   border-radius: 50%;
+    //   border: solid 5px violet;
+    //   animation: circl 20s linear infinite;
+    // }
     @keyframes circl {
       0% {
         transform: perspective(1000px) rotateY(360) rotateX(15deg)
@@ -79,5 +80,13 @@
           translateY(-30);
       }
     }
+  }
+  .fade{
+    height: 3rem;
+    width: 100%;
+    background: linear-gradient(180deg, transparent, rgb(24, 15, 46, 0.6), rgb(24, 15, 46));
+    z-index: 20;
+    position: absolute;
+    bottom: 0;
   }
 }
