@@ -6,9 +6,10 @@ function HomePage() {
       <div className="hero">
         <h2>
           {" "}
-          HI, <i class="fas fa-hand-paper"></i> I AM <span>EJEZIE CHINEDU</span>{" "}
+          HI! <i class="fas fa-hand-paper"></i> I AM <span>EJEZIE CHINEDU</span>{" "}
           A WEB DEVELOPER
         </h2>
+        <p>I PUT YOU ON THE WORLD WIDE WEB...</p>
       </div>
       <section>
         <div className="earth"></div>

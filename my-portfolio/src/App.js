@@ -7,11 +7,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="sidebarw">
-          <Sidebar />
-        </div>
-        <div className="main__body">
-          <HomePage />
+        <div className="home__wrap">
+          <div className="sidebarw">
+            <Sidebar />
+          </div>
+          <div className="main__body">
+            <HomePage />
+          </div>
         </div>
         <main>
           {/* <Switch><Route exact path="/" component={}/></Switch> */}
