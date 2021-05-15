@@ -27,7 +27,7 @@ function Sidebar() {
               </NavLink>
             </li>
             <li className="link__item">
-              <NavLink to="/blogs" exact activeClassName="active">
+              <NavLink to="/blog" exact activeClassName="active">
                 Blogs
               </NavLink>
             </li>

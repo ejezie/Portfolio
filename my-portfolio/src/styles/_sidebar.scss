@@ -1,12 +1,18 @@
 .sidebar {
-  // position: fixed;
+  position: fixed;
+  left: -20%;
+  height: 100%;
+  width: 18%;
+  background-color: rgb(24, 14, 49);
+  z-index: 1;
+  // width: 100%;
   .side__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     height: 100vh;
-    
+
     .profile {
       margin: 3%;
       width: 100%;

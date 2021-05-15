@@ -2,6 +2,8 @@
 @import "./styles/layout";
 @import "./styles/sidebar";
 @import "./styles/homepage";
+@import "./styles/about";
+@import "./styles/title";
 
 
 * {
@@ -13,4 +15,7 @@ body {
   background-color: #180f2e;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.4em;
+}
+span{
+  color: #29335f;
 }
