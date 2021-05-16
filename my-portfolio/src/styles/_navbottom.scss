@@ -42,7 +42,7 @@
         transition: 0.5s ease-in-out;
       }
       .nav__gridlist {
-        box-shadow: 1px 3px 7px rgb(0, 0, 0, 0.15);
+        box-shadow: 1px 1px 0.5px rgb(0, 0, 0, 0.15);
         padding: 6px;
       }
     }
@@ -79,10 +79,12 @@
     .nav__link {
       color: #29335f;
       display: flex;
+      flex-direction: column;
       align-items: center;
       text-decoration: none;
       i {
         margin-right: 2px;
+        font-size: 1.4rem;
       }
     }
   }

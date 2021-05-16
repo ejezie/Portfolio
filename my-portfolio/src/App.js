@@ -11,16 +11,17 @@ import NavBottom from "./pages/NavBottom";
 function App() {
   return (
     <Router>
-        <NavBottom />
-        <main>
-          <Switch>
-            <Route exact path="/" />
-            <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/portfolio" component={PortfolioPage} />
-            <Route exact path="/blog" component={BlogPage} />
-            <Route exact path="/contact" component={ContactPage} />
-          </Switch>
-        </main>
+      <NavBottom />
+      <HomePage />
+      <main>
+        <Switch>
+          <Route exact path="/" />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/portfolio" component={PortfolioPage} />
+          <Route exact path="/blog" component={BlogPage} />
+          <Route exact path="/contact" component={ContactPage} />
+        </Switch>
+      </main>
     </Router>
   );
 }
