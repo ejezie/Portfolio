@@ -6,24 +6,20 @@ import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import PortfolioPage from "./pages/PortfolioPage";
+import NavBottom from "./pages/NavBottom";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <div className="home__wrap">
-            <Sidebar />
-            <HomePage />
-        </div>
-        <AboutPage/>
-        
+        <NavBottom />
         <main>
           <Switch>
-          <Route exact path="/"/>
-          <Route exact path="/about" component={AboutPage}/>
-          <Route exact path="/portfolio" component={PortfolioPage}/>
-          <Route exact path="/blog" component={BlogPage}/>
-          <Route exact path="/contact" component={ContactPage}/>
+            <Route exact path="/" />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/portfolio" component={PortfolioPage} />
+            <Route exact path="/blog" component={BlogPage} />
+            <Route exact path="/contact" component={ContactPage} />
           </Switch>
         </main>
       </div>
