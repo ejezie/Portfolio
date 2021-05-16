@@ -11,7 +11,6 @@ import NavBottom from "./pages/NavBottom";
 function App() {
   return (
     <Router>
-      <div className="App">
         <NavBottom />
         <main>
           <Switch>
@@ -22,7 +21,6 @@ function App() {
             <Route exact path="/contact" component={ContactPage} />
           </Switch>
         </main>
-      </div>
     </Router>
   );
 }
