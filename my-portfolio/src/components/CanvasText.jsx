@@ -33,7 +33,7 @@ function CanvasText() {
       constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 2;
+        this.size = 1;
         this.baseX = this.x;
         this.baseY = this.y;
         this.density = Math.random() * 30 + 1;
@@ -45,11 +45,21 @@ function CanvasText() {
         ctx.closePath();
         ctx.fill();
       }
+      update() {
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < 50) {
+          this.size = 30;
+        } else {
+          this.size = 1;
+        }
+      }
     }
 
     const init = () => {
       particleArray = [];
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 500; i++) {
         let x = Math.random() * 500;
         let y = Math.random() * 500;
         particleArray.push(new Particle(x, y));
@@ -62,13 +72,14 @@ function CanvasText() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particleArray.length; i++) {
         particleArray[i].draw();
+        particleArray[i].update();
       }
       requestAnimationFrame(animate);
     };
     animate();
   }, []);
 
-  return <canvas id="canvas" ref={canvasRef}></canvas>;
+  return <canvas id="canvas" ref={canvasRef} height="500px"></canvas>;
 }
 
 export default CanvasText;
