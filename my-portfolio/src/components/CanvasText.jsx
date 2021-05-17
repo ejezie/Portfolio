@@ -42,8 +42,30 @@ function CanvasText() {
         ctx.fillStyle = "#715df2";
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
       }
     }
+
+    const init = () => {
+      particleArray = [];
+      for (let i = 0; i < 50; i++) {
+        let x = Math.random() * 500;
+        let y = Math.random() * 500;
+        particleArray.push(new Particle(x, y));
+      }
+    };
+    init();
+    console.log(particleArray);
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particleArray.length; i++) {
+        particleArray[i].draw();
+      }
+      requestAnimationFrame(animate);
+    };
+    animate();
   }, []);
 
   return <canvas id="canvas" ref={canvasRef}></canvas>;
