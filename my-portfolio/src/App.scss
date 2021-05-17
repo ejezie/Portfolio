@@ -6,7 +6,7 @@
 // @import "./styles/aboutsection";
 // @import "./styles/title";
 @import "./styles/navbottom";
-
+@import "./styles/canvastext";
 
 * {
   margin: 0;
@@ -14,12 +14,12 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.4em;
   color: #180f2e;
   scroll-behavior: smooth;
 }
-span{
+span {
   // color: #29335f;
 }
 // background-color: #180f2e;

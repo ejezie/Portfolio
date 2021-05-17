@@ -21,14 +21,14 @@
       color: #29335f;
     }
     .nav__name:hover {
-      color: #262b41;
+      color: #715df2;
     }
     .nav__toggle {
       transition: transform 0.3s linear;
-    }
-    .nav__toggle:hover {
-      color: #262b41;
-      transform: scale(1.1);
+      &:hover {
+        color: #715df2;
+        transform: scale(1.1);
+      }
     }
     @media screen and (max-width: 767px) {
       .nav__menu {
@@ -82,6 +82,11 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
+      transition: all 0.3s ease-in;
+      &:hover {
+        color: #715df2;
+        transform: scale(1.1);
+      }
       i {
         margin-right: 2px;
         font-size: 1.4rem;
