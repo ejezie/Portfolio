@@ -1,4 +1,4 @@
-import React, { useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 
 function CanvasText() {
   const canvasRef = useRef(null);
@@ -6,14 +6,16 @@ function CanvasText() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = "800";
+    canvas.height = "600";
     let particleArray = [];
+    let adjustX = 250;
+    let adjustY = 230;
 
     const mouse = {
       x: null,
       y: null,
-      radius: 150,
+      radius: 120,
     };
 
     window.addEventListener("mousemove", (e) => {
@@ -21,9 +23,9 @@ function CanvasText() {
       mouse.y = e.y;
     });
 
-    ctx.fillStyle = "#715df2";
-    ctx.font = "50px sans-serif";
-    ctx.fillText("HI, I'M EJEZIE", 20, 60);
+    ctx.fillStyle = "#29335f";
+    ctx.font = "25px sans-serif";
+    ctx.fillText("...Web Developer... ", 20, 60);
     // ctx.strokeStyle = "black";
     // ctx.strokeRect(0, 0, 400, 100);
     const textCoordinates = ctx.getImageData(0, 0, 400, 100);
@@ -33,7 +35,7 @@ function CanvasText() {
       constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 3;
+        this.size = 1;
         this.baseX = this.x;
         this.baseY = this.y;
         this.density = Math.random() * 40 + 5;
@@ -76,10 +78,11 @@ function CanvasText() {
       for (let y = 0, y2 = textCoordinates.height; y < y2; y++) {
         for (let x = 0, x2 = textCoordinates.width; x < x2; x++) {
           if (
-            textCoordinates.data[(y * 4 * textCoordinates.width) + (x * 4) + 3] > 128
+            textCoordinates.data[y * 4 * textCoordinates.width + x * 4 + 3] >
+            128
           ) {
-            let positionX = x;
-            let positionY = y;
+            let positionX = x + adjustX;
+            let positionY = y + adjustY;
             particleArray.push(new Particle(positionX, positionY));
           }
         }
@@ -100,7 +103,13 @@ function CanvasText() {
   }, []);
 
   return (
-    <canvas id="canvas" ref={canvasRef} height="100%" width="100%"></canvas>
+    <>
+      <canvas id="canvas" ref={canvasRef}>
+        <div className="hompage">
+          <h1>HEE</h1>
+        </div>
+      </canvas>
+    </>
   );
 }
 

@@ -1,7 +1,8 @@
 #canvas {
-  // background-color: black;
-  // position: fixed;
-  // height: 100%;
-  // width: 100%;
+  // background-color: rgb(0, 0, 0);
+
   // z-index: 10;
+  @media (max-width: 1700px) {
+    display: none;
+  }
 }

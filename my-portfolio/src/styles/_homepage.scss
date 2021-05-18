@@ -1,0 +1,46 @@
+.homepage {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 1;
+  .home__wrap {
+    display: flex;
+    .home__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .home__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2 {
+          //   margin: -4rem 0rem 0rem 4rem;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      .home__image {
+        // background-color: royalblue;
+        // border-radius: 50% 50% 50% 50%;
+        .image__border {
+          background-color: #29335f;
+          border-radius: 68% 2% 70% 50%;
+          width: 15rem;
+          margin-top: 30px;
+          // border-bottom: solid 2px rebeccapurple;
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .home__content {
+      flex-direction: column;
+    }
+    .home__image {
+      //   margin: 4rem;
+    }
+  }
+}
