@@ -27,7 +27,7 @@ function CanvasText() {
     // ctx.strokeStyle = "black";
     // ctx.strokeRect(0, 0, 400, 100);
     const textCoordinates = ctx.getImageData(0, 0, 400, 100);
-    console.log(textCoordinates);
+    console.log(textCoordinates.data);
 
     class Particle {
       constructor(x, y) {
@@ -73,10 +73,10 @@ function CanvasText() {
 
     const init = () => {
       particleArray = [];
-      for (let y = 0, y2 = textCoordinates.height; y2 > y; y++) {
-        for (let x = 0, x2 = textCoordinates.width; x2 > x; x++) {
+      for (let y = 0, y2 = textCoordinates.height; y < y2; y++) {
+        for (let x = 0, x2 = textCoordinates.width; x < x2; x++) {
           if (
-            textCoordinates.data[y * 4 * data.width + x * 4 + 3] > 128
+            textCoordinates.data[(y * 4 * textCoordinates.width) + (x * 4) + 3] > 128
           ) {
             let positionX = x;
             let positionY = y;
@@ -86,7 +86,7 @@ function CanvasText() {
       }
     };
     init();
-    console.log(particleArray);
+    // console.log(particleArray);
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
