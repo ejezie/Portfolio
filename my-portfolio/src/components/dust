@@ -1,4 +1,4 @@
-import React, { useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 
 function CanvasText() {
   const canvasRef = useRef(null);
@@ -26,17 +26,16 @@ function CanvasText() {
     ctx.fillText("HI, I'M EJEZIE", 20, 60);
     // ctx.strokeStyle = "black";
     // ctx.strokeRect(0, 0, 400, 100);
-    const textCoordinates = ctx.getImageData(0, 0, 400, 100);
-    console.log(textCoordinates);
+    const data = ctx.getImageData(0, 0, 400, 100);
 
     class Particle {
       constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 3;
+        this.size = 0.3;
         this.baseX = this.x;
         this.baseY = this.y;
-        this.density = Math.random() * 40 + 5;
+        this.density = (Math.random() * 40) + 5;
       }
       draw() {
         ctx.fillStyle = "#715df2";
@@ -59,13 +58,13 @@ function CanvasText() {
           this.x -= directionX;
           this.y -= directionY;
         } else {
-          if (this.x !== this.baseX) {
+          if(this.x !== this.baseX){
             let dx = this.x - this.baseX;
-            this.x -= dx / 10;
+            this.x -= dx/10 
           }
-          if (this.y !== this.baseY) {
+          if(this.y !== this.baseY){
             let dy = this.y - this.baseY;
-            this.y -= dy / 10;
+            this.y -= dy/10 
           }
         }
       }
@@ -73,16 +72,10 @@ function CanvasText() {
 
     const init = () => {
       particleArray = [];
-      for (let y = 0, y2 = textCoordinates.height; y2 > y; y++) {
-        for (let x = 0, x2 = textCoordinates.width; x2 > x; x++) {
-          if (
-            textCoordinates.data[y * 4 * data.width + x * 4 + 3] > 128
-          ) {
-            let positionX = x;
-            let positionY = y;
-            particleArray.push(new Particle(positionX, positionY));
-          }
-        }
+      for (let i = 0; i < 25000; i++) {
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        particleArray.push(new Particle(x, y));
       }
     };
     init();
