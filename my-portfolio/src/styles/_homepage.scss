@@ -50,15 +50,39 @@
         }
       }
       .home__image {
-        // background-color: royalblue;
-        // border-radius: 50% 50% 50% 50%;
         margin-bottom: 20px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 2;
+          width: 16rem;
+          height: 16rem;
+          background-color: rgb(0, 0, 0, 0);
+          border-top: solid 5px red;
+          border-radius: 50%;
+          z-index: -1;
+          animation: rotateb 2s infinite;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 16rem;
+          height: 16rem;
+          background-color: rgb(0, 0, 0, 0);
+          border-top: solid 5px purple;
+          border-radius: 50%;
+          z-index: -1;
+          animation: rotatea 2s infinite;
+        }
         .image__border {
           background-color: #29335f;
-          border-radius: 68% 2% 70% 50%;
+          border-radius: 68% 25% 70% 50%;
           width: 15rem;
           margin-top: 30px;
-          // border-bottom: solid 2px rebeccapurple;
         }
       }
     }
@@ -81,6 +105,16 @@
     }
     100% {
       transform: translateY(0px);
+    }
+  }
+  @keyframes rotatea {
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotateb {
+    to{
+      transform: rotate(-360deg);
     }
   }
 }
