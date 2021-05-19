@@ -19,16 +19,16 @@ function NavTop() {
               <NavTopTitle name={"About"} />
             </NavLink>
             <NavLink to="/skills">
-            <NavTopTitle name={"Skills"} />
+              <NavTopTitle name={"Skills"} />
             </NavLink>
             <NavLink to="/blog">
-            <NavTopTitle name={"Blog"} />
+              <NavTopTitle name={"Blog"} />
             </NavLink>
             <NavLink to="/portfolio">
-            <NavTopTitle name={"Portfolio"} />
+              <NavTopTitle name={"Portfolio"} />
             </NavLink>
             <NavLink to="/contact">
-            <NavTopTitle name={"Contact"} />
+              <NavTopTitle name={"Contact"} />
             </NavLink>
           </div>
           <div className="moon__sun">

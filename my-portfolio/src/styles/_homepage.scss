@@ -29,7 +29,7 @@
           color: whitesmoke;
           padding: 7px;
           border-radius: 10px;
-          &:hover{
+          &:hover {
             background-color: #3f4e91;
           }
         }
@@ -124,19 +124,22 @@
       font-size: 2.7rem;
     }
   }
-  @media (max-width: 630px) {
+  @media (max-width: 730px) {
     .home__text {
-      margin-top: -19%;
+      margin-top: -15%;
     }
     .home__content {
       flex-direction: column-reverse;
-      margin-top: -30px;
+      margin-top: -20px;
       // height: 100%;
       // width: 100%;
     }
     .describe__p {
       font-size: 0.9rem;
       max-width: 100%;
+    }
+    h2 {
+      font-size: 2rem;
     }
   }
 
