@@ -29,6 +29,9 @@
           color: whitesmoke;
           padding: 7px;
           border-radius: 10px;
+          &:hover{
+            background-color: #3f4e91;
+          }
         }
         .send {
           margin-left: 3px;

@@ -47,8 +47,8 @@ function NavBottom() {
             </li>
             <li className="nav__item">
               <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
-                <i class="far fa-briefcase"></i>
-                <p>Services</p>
+              <i class="far fa-tools"></i>
+                <p>Skills</p>
               </NavLink>
             </li>
             <li className="nav__item">

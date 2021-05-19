@@ -2,44 +2,79 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   .navtop__wrap {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     .navtopname__wrap {
       display: flex;
+      i{
+          margin-left: 3px;
+      }
     }
     .right {
       display: flex;
-      width: 50%;
+      //   width: 50%;
       justify-content: space-between;
       .navtop__sub {
         display: flex;
         align-items: center;
-        margin-right: 10px;
+        justify-content: space-around;
+        a{
+            text-decoration: none;
+          color: #29335f;
+          &:hover {
+            color: #3f4e91;
+          }
+        }
+        a:not(:last-child) {
+          margin-right: 33px;
+          
+        }
       }
       .moon__sun {
         display: flex;
+        margin-left: 7px;
+        transform-style: preserve-3d;
         .moon {
           height: 2rem;
           width: 2rem;
           background-color: black;
           border-radius: 50%;
           position: absolute;
+          background: url(../images/m1.jpg);
+          background-size: cover;
+          border-radius: 50%;
+          box-shadow: inset 0 0 1px rgb(0,0,0,0.1), 0 0 20px rgb(252, 252, 250);
+          animation: animateboth 45s linear infinite;
         }
         .sun {
           height: 2rem;
           width: 2rem;
-          background-color: yellow;
+        //   background-color: yellow;
           border-radius: 50%;
           position: relative;
+          background: url(../images/sun1.png);
+          background-size: cover;
+          border-radius: 50%;
+          box-shadow: inset 4px 0px 10px rgb(0,0,0, 0.1), 0 0 20px rgb(252, 252, 5);
+          animation: animateboth 45s linear infinite;
         }
       }
     }
   }
   @media (max-width: 630px) {
-    .navtop__sub {
+    a {
       display: none;
     }
+  }
+  @keyframes animateboth {
+      0%{
+          background-position: 0 0;
+      }
+      100%{
+          background-position: -700px 0;
+      }
   }
 }

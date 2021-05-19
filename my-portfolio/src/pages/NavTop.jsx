@@ -1,5 +1,6 @@
 import React from "react";
 import NavTopTitle from "../components/NavTopTitle";
+import { NavLink } from "react-router-dom";
 
 function NavTop() {
   return (
@@ -10,18 +11,30 @@ function NavTop() {
           <i class="fas fa-file-code"></i>
         </div>
         <div className="right">
-        <div className="navtop__sub">
-          <NavTopTitle name={"Home"} />
-          <NavTopTitle name={"About"} />
-          <NavTopTitle name={"Skills"} />
-          <NavTopTitle name={"Services"} />
-          <NavTopTitle name={"Portfolio"} />
-          <NavTopTitle name={"Contact"} />
-        </div>
-        <div className="moon__sun">
-          <div className="moon"></div>
-          <div className="sun"></div>
-        </div>
+          <div className="navtop__sub">
+            <NavLink to="/">
+              <NavTopTitle name={"Home"} />
+            </NavLink>
+            <NavLink to="/about">
+              <NavTopTitle name={"About"} />
+            </NavLink>
+            <NavLink to="/skills">
+            <NavTopTitle name={"Skills"} />
+            </NavLink>
+            <NavLink to="/blog">
+            <NavTopTitle name={"Blog"} />
+            </NavLink>
+            <NavLink to="/portfolio">
+            <NavTopTitle name={"Portfolio"} />
+            </NavLink>
+            <NavLink to="/contact">
+            <NavTopTitle name={"Contact"} />
+            </NavLink>
+          </div>
+          <div className="moon__sun">
+            <div className="moon"></div>
+            <div className="sun"></div>
+          </div>
         </div>
       </div>
     </div>
