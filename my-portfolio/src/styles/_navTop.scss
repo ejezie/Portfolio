@@ -1,0 +1,45 @@
+.navtop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  .navtop__wrap {
+    display: flex;
+    justify-content: space-between;
+    .navtopname__wrap {
+      display: flex;
+    }
+    .right {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      .navtop__sub {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+      .moon__sun {
+        display: flex;
+        .moon {
+          height: 2rem;
+          width: 2rem;
+          background-color: black;
+          border-radius: 50%;
+          position: absolute;
+        }
+        .sun {
+          height: 2rem;
+          width: 2rem;
+          background-color: yellow;
+          border-radius: 50%;
+          position: relative;
+        }
+      }
+    }
+  }
+  @media (max-width: 630px) {
+    .navtop__sub {
+      display: none;
+    }
+  }
+}

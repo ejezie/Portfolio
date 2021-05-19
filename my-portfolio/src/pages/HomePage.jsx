@@ -10,9 +10,9 @@ function HomePage() {
       <div className="home__wrap">
         <div className="home__content">
           <div className="home__text">
-            <h2>Hi, I AM EJEZIE </h2>
+            <h2>Hi, I AM DARRYL </h2>
             <p className="describe__p">
-              An enthusiatic frontend developer with good eye for simple elegant
+              An enthusiatic frontend developer with a good eye for simple elegant
               user friendly designs
             </p>
             <NavLink to="/contacts" className="contact">

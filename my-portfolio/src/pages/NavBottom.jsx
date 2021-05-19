@@ -15,7 +15,7 @@ function NavBottom() {
     <div className="navbottom">
       <nav className="bottom__navwrap">
         <NavLink to="/" className="nav__name">
-          Ejezie
+          Darryl
         </NavLink>
         <div className={navMenuClass.join(" ")}>
           <ul className="nav__gridlist">
@@ -60,7 +60,7 @@ function NavBottom() {
             <li className="nav__item">
               <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
                 <i class="far fa-envelope-open-text"></i>
-                <p>Contactme</p>
+                <p>Contact me</p>
               </NavLink>
             </li>
           </ul>

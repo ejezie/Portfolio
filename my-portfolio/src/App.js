@@ -7,10 +7,12 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import NavBottom from "./pages/NavBottom";
+import NavTop from "./pages/NavTop";
 
 function App() {
   return (
     <Router>
+      <NavTop/>
       <NavBottom />
       <HomePage />
       <main>
