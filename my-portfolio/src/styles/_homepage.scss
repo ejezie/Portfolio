@@ -8,7 +8,6 @@
     display: none;
   }
   .home__wrap {
-    display: flex;
     margin-top: 20px;
     .home__content {
       display: flex;
@@ -56,43 +55,61 @@
           content: "";
           position: absolute;
           top: 0;
-          left: 2;
-          width: 16rem;
+          left: 0;
+          width: 17rem;
           height: 16rem;
-          background-color: rgb(0, 0, 0, 0);
+          background-color: red;
           border-top: solid 5px red;
           border-radius: 50%;
           z-index: -1;
-          animation: rotateb 2s infinite;
+          animation: rotateb 4s 3s infinite;
+          animation-timing-function: linear;
+          opacity: 0;
         }
         &::after {
           content: "";
           position: absolute;
           top: 0;
-          right: 0;
+          left: 0;
           width: 16rem;
           height: 16rem;
-          background-color: rgb(0, 0, 0, 0);
+          background-color: purple;
           border-top: solid 5px purple;
           border-radius: 50%;
           z-index: -1;
-          animation: rotatea 2s infinite;
+          animation: rotatea 4s 3s infinite;
+          animation-timing-function: linear;
+          opacity: 0;
         }
         .image__border {
           background-color: #29335f;
-          border-radius: 68% 25% 70% 50%;
+          border-radius: 68% 80% 20% 100%;
+          object-fit: contain;
           width: 15rem;
+          height: 15rem;
           margin-top: 30px;
         }
       }
     }
   }
-  @media (max-width: 500px) {
-    .home__content {
-      flex-direction: column;
+  @media (max-width: 1699px) {
+    .home__wrap {
+      margin-top: 30%;
     }
-    .home__image {
-      //   margin: 4rem;
+    .describe__p {
+      font-size: 1rem;
+    }
+    .image__border {
+      // width: 14rem;
+    }
+  }
+  @media (max-width: 630px) {
+    .home__wrap {
+      margin-top: 0%;
+    }
+    .home__content {
+      flex-direction: column-reverse;
+      margin-top: 50px;
     }
     .describe__p {
       font-size: 0.9rem;
@@ -108,13 +125,23 @@
     }
   }
   @keyframes rotatea {
-    to{
+    from {
+      opacity: 1;
       transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(-360deg);
+      opacity: 1;
     }
   }
   @keyframes rotateb {
-    to{
+    from {
+      opacity: 1;
       transform: rotate(-360deg);
+    }
+    to {
+      transform: rotate(360deg);
+      opacity: 1;
     }
   }
 }

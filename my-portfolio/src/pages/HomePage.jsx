@@ -9,9 +9,6 @@ function HomePage() {
       <CanvasText />
       <div className="home__wrap">
         <div className="home__content">
-          <div className="home__image">
-            <img src={me} className="image__border" alt="Ejezie" />
-          </div>
           <div className="home__text">
             <h2>Hi, I AM EJEZIE </h2>
             <p className="describe__p">
@@ -26,6 +23,9 @@ function HomePage() {
               <p className="scroll__p">scroll</p>
               <i class="fas fa-long-arrow-alt-down arrow"></i>
             </NavLink>
+          </div>
+          <div className="home__image">
+            <img src={me} className="image__border" alt="Ejezie" />
           </div>
         </div>
       </div>
