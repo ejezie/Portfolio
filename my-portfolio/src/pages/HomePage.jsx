@@ -13,7 +13,7 @@ function HomePage() {
             <h2>Hi, I AM DARRYL </h2>
             <p className="describe__p">
               An enthusiatic frontend developer with a good eye for simple elegant
-              user friendly designs
+              user friendly designs 
             </p>
             <NavLink to="/contacts" className="contact">
               Contact me<i class="fal fa-paper-plane send"></i>

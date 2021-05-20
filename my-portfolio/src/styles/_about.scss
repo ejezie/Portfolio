@@ -1,15 +1,18 @@
 .about {
+  width: 100vw;
+  height: 100vh;
   .about__wrap {
+    overflow: hidden;
+    .about__title {
+      margin: 0px 0px 30px 20px;
+    }
     .about__content {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       .about__images {
         position: relative;
         display: flex;
-        width: 125rem;
-        height: 500px;
-        // background-color: black;
 
         position: relative;
         .image__laptop {
@@ -20,24 +23,57 @@
         }
         .screen__content {
           position: absolute;
-          left: 111px;
-          top: 92px;
-          width: 340px;
-          height: 300px;
+          left: 108px;
+          top: 106px;
+          max-width: 346px;
+          max-height: 300px;
           object-fit: contain;
-          border-radius: 5px;
-          display: inline;
         }
       }
       .description__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
         .description {
+          font-size: 1.2rem;
+          text-align: justify;
+          width: 70%;
+          margin-bottom: 20px;
         }
         .about__download {
           .download__link {
             text-decoration: none;
+            color: #29335f;
           }
         }
       }
+    }
+  }
+  @media (max-width: 998px) {
+    .about__content {
+      flex-direction: column;
+    }
+    .image__laptop {
+      width: 400px;
+      height: 350px;
+    }
+    .screen__content {
+      margin-left: -33px;
+      margin-top: -86px;
+      width: 250px;
+      height: 300px;
+    }
+    .description__wrapper {
+      .description {
+        text-align: center;
+        width: 100%;
+      }
+      .about__title {
+        margin: 0px 0px 0px 100px;
+      }
+     
     }
   }
 }

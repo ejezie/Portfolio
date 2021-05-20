@@ -15,7 +15,7 @@
       border-radius: 10px;
       opacity: 0.8;
       overflow: hidden;
-      animation: move 2s 1s ease-in;
+      animation: moves 2s 1s ease-in;
     }
     &::after {
       content: "";
@@ -27,9 +27,9 @@
       background-color: rgb(21, 34, 73);
       border-radius: 10px 0px 10px 10px;
       opacity: 0.8;
-      animation: move 2s 1s ease-in;
+      animation: moves 2s 1s ease-in;
     }
-    @keyframes move {
+    @keyframes moves {
       0% {
         width: 1rem;
       }

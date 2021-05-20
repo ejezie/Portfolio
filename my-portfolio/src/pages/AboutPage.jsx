@@ -8,7 +8,9 @@ function About() {
   return (
     <div className="about">
       <div className="about__wrap">
-        <Title title={"About Me"} span={"About me"} />
+        <div className="about__title">
+          <Title title={"About Me"} span={"About me"} />
+        </div>
         <div className="about__content">
           <div className="about__images">
             <img src={laptop} alt="laptop" className="image__laptop" />
@@ -20,7 +22,10 @@ function About() {
               I am a web developer with knowledge and experience in making
               simple elegant web designs. My goal is to bring to life your
               imagination and idendity just as you want them. I basically turn
-              designs into codes.
+              designs into codes. I love to code, to spend time designing and making 
+              highly responsive website for my clients. To me a webpage is more, it defines 
+              your identy and brand message. Doing this isn't just work for me, its fun and 
+              its a part of my life that i continue to enjoy.
             </p>
             <div className="about__download">
               <NavLink
