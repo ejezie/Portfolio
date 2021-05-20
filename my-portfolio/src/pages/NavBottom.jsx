@@ -42,12 +42,12 @@ function NavBottom() {
             <li className="nav__item">
               <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
                 <i class="far fa-file-alt"></i>
-                <p>Skills</p>
+                <p>Blog</p>
               </NavLink>
             </li>
             <li className="nav__item">
               <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
-              <i class="far fa-tools"></i>
+                <i class="far fa-tools"></i>
                 <p>Skills</p>
               </NavLink>
             </li>
@@ -60,7 +60,7 @@ function NavBottom() {
             <li className="nav__item">
               <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
                 <i class="far fa-envelope-open-text"></i>
-                <p>Contact me</p>
+                <p>Contact</p>
               </NavLink>
             </li>
           </ul>

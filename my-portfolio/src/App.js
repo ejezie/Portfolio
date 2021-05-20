@@ -15,6 +15,7 @@ function App() {
       <NavTop />
       <NavBottom />
       <HomePage />
+      <AboutPage/>
       <main>
         <Switch>
           <Route exact path="/" />
