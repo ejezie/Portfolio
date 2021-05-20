@@ -10,11 +10,9 @@ function About() {
       <div className="about__wrap">
         <Title title={"About Me"} span={"About me"} />
         <div className="about__content">
-          <div>
-            <div className="about__images">
-              <img src={laptop} alt="laptop" className="image__laptop" />
-              <img src={screen} alt="screen" className="screen__content" />
-            </div>
+          <div className="about__images">
+            <img src={laptop} alt="laptop" className="image__laptop" />
+            <img src={screen} alt="screen" className="screen__content" />
           </div>
           <div className="description__wrapper">
             <h3>My Introduction</h3>
@@ -25,7 +23,10 @@ function About() {
               designs into codes.
             </p>
             <div className="about__download">
-              <NavLink download="" to="assets/resume.pdf">
+              <NavLink
+                className="download__link"
+                download=""
+                to="assets/resume.pdf">
                 Download <i class="far fa-cloud-download-alt"></i>
               </NavLink>
             </div>

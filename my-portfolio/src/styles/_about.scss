@@ -1,3 +1,43 @@
-.about{
-    
+.about {
+  .about__wrap {
+    .about__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .about__images {
+        position: relative;
+        display: flex;
+        width: 125rem;
+        height: 500px;
+        // background-color: black;
+
+        position: relative;
+        .image__laptop {
+          position: relative;
+          top: 0;
+          left: 0;
+          object-fit: contain;
+        }
+        .screen__content {
+          position: absolute;
+          left: 120px;
+          top: 92px;
+          width: 320px;
+          height: 300px;
+          object-fit: contain;
+          border-radius: 5px;
+          display: inline;
+        }
+      }
+      .description__wrapper {
+        .description {
+        }
+        .about__download {
+          .download__link {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
