@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Title from "../components/Title";
+import Slide from "../components/Slide"
 
 function SkillsPage() {
   const [skill, setSkill] = useState(false);
@@ -94,7 +95,7 @@ function SkillsPage() {
 
           <div className="skills__content">
             <div className="skills__header">
-              <i class="fas fa-server skills__icon"></i>
+              <i class="fas fa-server skills__icon icon__two"></i>
               <h2>Backend Developer</h2>
             </div>
             <div className={skillsListClasses.join(" ")}>
@@ -151,6 +152,7 @@ function SkillsPage() {
           </div>
         </div>
       </div>
+      <Slide/>
     </div>
   );
 }

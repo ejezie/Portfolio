@@ -1,7 +1,8 @@
 .skills {
   margin-top: 150px;
-  width: 100vw;
+  // width: 100vw;
   // height: 100vh;
+  // scroll-behavior: inherit;
   @media (max-width: 1000px) {
     margin-top: 90px;
   }
@@ -42,6 +43,7 @@
         .skills__header {
           display: flex;
           align-items: center;
+          margin-bottom: -8px;
           i,
           h2 {
             margin-right: 10px;
@@ -56,6 +58,9 @@
             @media (max-width: 690px) {
               font-size: 1.2rem;
             }
+          }
+          .icon__two {
+            margin-right: 15px;
           }
           .skills__icon {
             font-size: 2.5rem;
@@ -152,8 +157,8 @@
       padding: 10px;
       font-weight: 800;
       cursor: pointer;
-      height: 26px;
-      margin-bottom: 10px;
+      height: 27px;
+      margin-bottom: 20px;
     }
 
     .arrow__close {
