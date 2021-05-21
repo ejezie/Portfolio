@@ -1,23 +1,215 @@
 .skills {
-    padding: 20px;
+  margin-top: 150px;
+  display: grid;
+  height: 100vh;
+  @media (max-width: 1000px) {
+    margin-top: 90px;
+  }
   .skills__wrapper {
+    display: grid;
+    .skills__heading {
+      margin: 0px 0px 100px 40%;
+      @media (max-width: 1000px) {
+        margin: 0px 0px 30px 20px;
+      }
+    }
     .skills__container {
       display: flex;
+      align-items: center;
       justify-content: space-around;
+      padding: 40px;
+      @media (max-width: 990px) {
+        flex-direction: column;
+        width: 24rem;
+      }
       .skills__content {
+        margin-bottom: 20px;
         .skills__header {
           display: flex;
           align-items: center;
+          @media (max-width: 990px) {
+            font-size: 1rem;
+          }
           i,
           h2 {
             margin-right: 10px;
             font-weight: 300;
           }
-          h2{
-              font-size: 2rem;
+          h2 {
+            font-size: 2rem;
+            font-weight: 500;
+          }
+          .skills__icon {
+            font-size: 2.5rem;
+            font-weight: 800;
           }
         }
       }
+    }
+    .close__skill {
+      height: 0px;
+      overflow: hidden;
+    }
+    .skills__list {
+      .skills__data {
+        .skills__title {
+          display: flex;
+          justify-content: space-between;
+          // margin: 0px 0px 10px 0%;
+          .skills__name {
+            font-weight: 500;
+          }
+          .skills__number {
+          }
+        }
+      }
+      .skill__bar,
+      .skill__percentage {
+        height: 8px;
+        border-radius: 0.25rem;
+      }
+      .skill__bar {
+        background-color: royalblue;
+      }
+      .skill__percentage {
+        display: block;
+        background-color: #29335f;
+      }
+      .skill__html {
+        width: 95%;
+        animation: skills_move1 3s ease-in-out;
+      }
+      .skill__css {
+        width: 90%;
+        animation: skills_move2 3.2s ease-in-out;
+      }
+      .skill__javascript {
+        width: 85%;
+        animation: skills_move3 3.4s ease-in-out;
+      }
+      .skill__react {
+        width: 85%;
+        animation: skills_move4 3.6s ease-in-out;
+      }
+      .skill__sass {
+        width: 90%;
+        animation: skills_move5 3.8s ease-in-out;
+      }
+      .skill__node {
+        width: 65%;
+        animation: skills_move6 4s ease-in-out;
+      }
+      .skill__express {
+        width: 70%;
+        animation: skills_move7 4.2s ease-in-out;
+      }
+      .skill__mongo {
+        width: 70%;
+        animation: skills_move8 4.4s ease-in-out;
+      }
+      .skill__python {
+        width: 75%;
+        animation: skills_move9 4.6s ease-in-out;
+      }
+      .skill__django {
+        width: 60%;
+        animation: skills_move10 4.8s ease-in-out;
+      }
+    }
+    .arrow__open {
+      transform: rotate(-180deg);
+    }
+    .skills__arrow {
+      transition: 3s ease-in-out;
+      box-shadow: -2px 2px 6px rgb(0, 0, 0, 0.4);
+      padding: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      height: 50px;
+    }
+
+    .arrow__close {
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes skills_move1 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 95%;
+    }
+  }
+  @keyframes skills_move2 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 90%;
+    }
+  }
+  @keyframes skills_move3 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 85%;
+    }
+  }
+  @keyframes skills_move4 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 85%;
+    }
+  }
+  @keyframes skills_move5 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 90%;
+    }
+  }
+  @keyframes skills_move6 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 65%;
+    }
+  }
+  @keyframes skills_move7 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 70%;
+    }
+  }
+  @keyframes skills_move8 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 70%;
+    }
+  }
+  @keyframes skills_move9 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 75%;
+    }
+  }
+  @keyframes skills_move10 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 60%;
     }
   }
 }

@@ -1,9 +1,11 @@
 .about {
-  overflow: hidden;
-  // height: 85vh;
+  // overflow: hidden;
   .about__wrap {
     .about__title {
-      margin: 0px 0px 30px 20px;
+      margin: 0px 0px 100px 40%;
+      @media (max-width:1000px) {
+        margin: 0px 0px 30px 20px;
+      }
     }
     .about__content {
       display: flex;
