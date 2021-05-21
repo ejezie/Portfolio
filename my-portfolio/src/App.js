@@ -15,7 +15,8 @@ function App() {
       <NavTop />
       <NavBottom />
       <HomePage />
-      <AboutPage/>
+      <AboutPage />
+      <SkillsPage />
       <main>
         <Switch>
           <Route exact path="/" />

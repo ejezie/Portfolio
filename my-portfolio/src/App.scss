@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-// @import "./styles/layout";
-// @import "./styles/sidebar";
 @import "./styles/homepage";
 @import "./styles/about";
-// @import "./styles/aboutsection";
+@import "./styles/skills";
 @import "./styles/title";
 @import "./styles/navbottom";
 @import "./styles/navtoptitle";
@@ -20,7 +18,7 @@ body {
   font-size: 1.4em;
   color: #29335f;
   scroll-behavior: smooth;
-  // background-color: black;
+  // background-color: #090a11;
 }
 span {
   // color: #29335f;

@@ -1,5 +1,6 @@
 .about {
   overflow: hidden;
+  // height: 85vh;
   .about__wrap {
     .about__title {
       margin: 0px 0px 30px 20px;
@@ -55,15 +56,14 @@
           @media (max-width: 1690px) {
             // text-align: center;
             width: 31rem;
-            @media (max-width:1200px) {
+            @media (max-width: 1200px) {
               font-size: 1rem;
               width: 27rem;
-              @media (max-width:730px) {
+              @media (max-width: 730px) {
                 font-size: 0.7rem;
                 width: 19rem;
               }
             }
-            
           }
         }
         .about__download {
@@ -73,7 +73,7 @@
             color: white;
             padding: 8px;
             border-radius: 5px;
-            &:hover{
+            &:hover {
               background-color: #3f4e91;
             }
           }
@@ -82,7 +82,7 @@
     }
     .social__link {
       font-size: 3rem;
-      text-align: start;
+      text-align: center;
       margin-left: 570px;
       @media (max-width: 990px) {
         font-size: 1.5rem;

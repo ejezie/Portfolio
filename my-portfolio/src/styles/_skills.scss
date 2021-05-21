@@ -1,0 +1,23 @@
+.skills {
+    padding: 20px;
+  .skills__wrapper {
+    .skills__container {
+      display: flex;
+      justify-content: space-around;
+      .skills__content {
+        .skills__header {
+          display: flex;
+          align-items: center;
+          i,
+          h2 {
+            margin-right: 10px;
+            font-weight: 300;
+          }
+          h2{
+              font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
