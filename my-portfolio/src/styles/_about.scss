@@ -1,8 +1,6 @@
 .about {
-  width: 100vw;
-  height: 100vh;
+  overflow: hidden;
   .about__wrap {
-    overflow: hidden;
     .about__title {
       margin: 0px 0px 30px 20px;
     }
@@ -10,6 +8,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: 998px) {
+        flex-direction: column;
+      }
       .about__images {
         position: relative;
         display: flex;
@@ -20,6 +21,10 @@
           top: 0;
           left: 0;
           object-fit: contain;
+          @media (max-width: 998px) {
+            width: 400px;
+            height: 350px;
+          }
         }
         .screen__content {
           position: absolute;
@@ -28,6 +33,12 @@
           max-width: 346px;
           max-height: 300px;
           object-fit: contain;
+          @media (max-width: 998px) {
+            margin-left: -33px;
+            margin-top: -86px;
+            width: 250px;
+            height: 300px;
+          }
         }
       }
       .description__wrapper {
@@ -35,45 +46,54 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 15px;
+        padding: 5px;
         .description {
           font-size: 1.2rem;
-          text-align: center;
-          width: 70%;
+          text-align: justify;
+          width: 80%;
           margin-bottom: 20px;
+          @media (max-width: 1690px) {
+            // text-align: center;
+            width: 31rem;
+            @media (max-width:1200px) {
+              font-size: 1rem;
+              width: 27rem;
+              @media (max-width:730px) {
+                font-size: 0.7rem;
+                width: 19rem;
+              }
+            }
+            
+          }
         }
         .about__download {
           .download__link {
             text-decoration: none;
-            color: #29335f;
+            background-color: #29335f;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            &:hover{
+              background-color: #3f4e91;
+            }
           }
         }
       }
     }
-  }
-  @media (max-width: 998px) {
-    .about__content {
-      flex-direction: column;
-    }
-    .image__laptop {
-      width: 400px;
-      height: 350px;
-    }
-    .screen__content {
-      margin-left: -33px;
-      margin-top: -86px;
-      width: 250px;
-      height: 300px;
-    }
-    .description__wrapper {
-      .description {
+    .social__link {
+      font-size: 3rem;
+      text-align: start;
+      margin-left: 570px;
+      @media (max-width: 990px) {
+        font-size: 1.5rem;
+        margin: 40px 0px 0px 15px;
         text-align: center;
-        width: 100%;
       }
-      .about__title {
-        margin: 0px 0px 0px 100px;
+      a {
+        text-decoration: none;
+        color: #29335f;
+        margin-right: 15px;
       }
-     
     }
   }
 }

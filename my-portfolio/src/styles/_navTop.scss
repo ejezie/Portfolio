@@ -12,8 +12,8 @@
     .navtopname__wrap {
       display: flex;
       align-items: center;
-      i{
-          margin-left: 3px;
+      i {
+        margin-left: 3px;
       }
     }
     .right {
@@ -24,8 +24,8 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        a{
-            text-decoration: none;
+        a {
+          text-decoration: none;
           color: #29335f;
           &:hover {
             color: #3f4e91;
@@ -33,13 +33,13 @@
         }
         a:not(:last-child) {
           margin-right: 33px;
-          
         }
       }
       .moon__sun {
         display: flex;
         margin-left: 20px;
         transform-style: preserve-3d;
+        cursor: pointer;
         .moon {
           height: 2rem;
           width: 2rem;
@@ -49,7 +49,8 @@
           background: url(../images/m1.jpg);
           background-size: cover;
           border-radius: 50%;
-          box-shadow: inset 0 0 1px rgb(0,0,0,0.1), 0 0 20px rgb(252, 252, 250);
+          box-shadow: inset 0 0 1px rgb(0, 0, 0, 0.1),
+            0 0 20px rgb(252, 252, 250);
           animation: animateboth 45s linear infinite;
         }
         .sun {
@@ -61,7 +62,8 @@
           background: url(../images/sun3.png);
           background-size: cover;
           border-radius: 50%;
-          box-shadow: inset 0px 0px 0.5px rgb(0,0,0, 0.1), 0 0 5px rgb(252, 252, 5);
+          box-shadow: inset 0px 0px 0.5px rgb(0, 0, 0, 0.1),
+            0 0 5px rgb(252, 252, 5);
           animation: animateboth 45s linear infinite;
         }
       }
@@ -73,11 +75,11 @@
     }
   }
   @keyframes animateboth {
-      0%{
-          background-position: 0 0;
-      }
-      100%{
-          background-position: -700px 0;
-      }
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -700px 0;
+    }
   }
 }

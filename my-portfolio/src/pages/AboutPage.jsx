@@ -17,15 +17,16 @@ function About() {
             <img src={screen} alt="screen" className="screen__content" />
           </div>
           <div className="description__wrapper">
-            <h3>My Introduction</h3>
+            <h3>MY INTRODUCTION</h3>
             <p className="description">
               I am a web developer with knowledge and experience in making
               simple elegant web designs. My goal is to bring to life your
               imagination and idendity just as you want them. I basically turn
-              designs into codes. I love to code, to spend time designing and making 
-              highly responsive website for my clients. To me a webpage is more, it defines 
-              your identy and brand message. Doing this isn't just work for me, its fun and 
-              its a part of my life that i continue to enjoy.
+              designs into codes. I love to code, to spend time designing and
+              making highly responsive website for my clients. To me a webpage
+              is more, it defines your identy and brand message. Doing this
+              isn't just work for me, its fun and its a part of my life that i
+              continue to enjoy.
             </p>
             <div className="about__download">
               <NavLink
@@ -36,6 +37,12 @@ function About() {
               </NavLink>
             </div>
           </div>
+        </div>
+        <div className="social__link">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
         </div>
       </div>
     </div>
