@@ -1,12 +1,11 @@
 .skills {
   margin-top: 150px;
-  display: grid;
-  height: 100vh;
+  width: 100vw;
+  // height: 100vh;
   @media (max-width: 1000px) {
     margin-top: 90px;
   }
   .skills__wrapper {
-    display: grid;
     .skills__heading {
       margin: 0px 0px 100px 40%;
       @media (max-width: 1000px) {
@@ -15,21 +14,34 @@
     }
     .skills__container {
       display: flex;
-      align-items: center;
       justify-content: space-around;
       padding: 40px;
-      @media (max-width: 990px) {
+      @media (max-width: 885px) {
         flex-direction: column;
-        width: 24rem;
+        padding: 150px;
+        margin-top: -70px;
+        // width: 24rem;
+        @media (max-width: 672px) {
+          padding: 120px;
+          margin-top: -50px;
+        }
+        @media (max-width: 570px) {
+          padding: 100px;
+          margin-top: -30px;
+        }
+        @media (max-width: 495px) {
+          padding: 80px;
+          margin-top: -10px;
+        }
+        @media (max-width: 425px) {
+          padding: 50px;
+        }
       }
       .skills__content {
         margin-bottom: 20px;
         .skills__header {
           display: flex;
           align-items: center;
-          @media (max-width: 990px) {
-            font-size: 1rem;
-          }
           i,
           h2 {
             margin-right: 10px;
@@ -38,10 +50,22 @@
           h2 {
             font-size: 2rem;
             font-weight: 500;
+            @media (max-width: 1690px) {
+              font-size: 1.5rem;
+            }
+            @media (max-width: 690px) {
+              font-size: 1.2rem;
+            }
           }
           .skills__icon {
             font-size: 2.5rem;
             font-weight: 800;
+            @media (max-width: 1690px) {
+              font-size: 1.7rem;
+            }
+            @media (max-width: 690px) {
+              font-size: 1.3rem;
+            }
           }
         }
       }
@@ -55,7 +79,10 @@
         .skills__title {
           display: flex;
           justify-content: space-between;
-          // margin: 0px 0px 10px 0%;
+          margin: 0px 0px 5px 0%;
+          @media (max-width: 1690px) {
+            font-size: 1rem;
+          }
           .skills__name {
             font-weight: 500;
           }
@@ -125,7 +152,8 @@
       padding: 10px;
       font-weight: 800;
       cursor: pointer;
-      height: 50px;
+      height: 26px;
+      margin-bottom: 10px;
     }
 
     .arrow__close {
