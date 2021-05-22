@@ -17,6 +17,7 @@ function App() {
       <HomePage />
       <AboutPage />
       <SkillsPage />
+      <PortfolioPage/>
       <main>
         <Switch>
           <Route exact path="/" />
