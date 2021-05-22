@@ -9,6 +9,7 @@
 @import "./styles/canvastext";
 @import "./styles/slide";
 @import "./styles/icon";
+@import "./styles/background";
 
 * {
   margin: 0;
@@ -20,6 +21,7 @@ body {
   font-size: 1.4em;
   color: #29335f;
   scroll-behavior: smooth;
+  z-index: 1;
   // background-color: #090a11;
 }
 span {

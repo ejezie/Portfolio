@@ -8,10 +8,12 @@ import PortfolioPage from "./pages/PortfolioPage";
 import NavBottom from "./pages/NavBottom";
 import NavTop from "./pages/NavTop";
 import SkillsPage from "./pages/SkillsPage";
+import BackgroundPage from "./pages/BackgroundPage";
 
 function App() {
   return (
     <Router>
+      <BackgroundPage/>
       <NavTop />
       <NavBottom />
       <HomePage />
