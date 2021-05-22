@@ -1,0 +1,53 @@
+.icon {
+  .icon_animate {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-top: solid 10px #29335f;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: iconr 2s linear infinite;
+    &::before,
+    &::after {
+      content: "";
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      left: 0;
+      top: -10px;
+      border-radius: 50%;
+    }
+    &::before {
+      border-top: solid 10px red;
+      transform: rotate(120deg);
+    }
+    &::after {
+      border-top: solid 10px purple;
+      transform: rotate(240deg);
+    }
+    span {
+      img {
+        height: 80px;
+        width: 80px;
+        object-fit: contain;
+        animation: iconi 2s linear infinite;
+      }
+    }
+  }
+  p {
+    margin-left: 12px;
+    font-size: 0.7rem;
+  }
+  @keyframes iconr {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes iconi {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}
