@@ -21,10 +21,10 @@ function About() {
             <p className="description">
               I am a web developer with knowledge and experience in making
               simple elegant web designs. My goal is to bring to life your
-              imagination and idendity just as you want them. I basically turn
+              imagination and identity just as you want them. I basically turn
               designs into codes. I love to code, to spend time designing and
               making highly responsive website for my clients. To me a webpage
-              is more, it defines your identy and brand message. Doing this
+              is more, it defines your identity and brand message. Doing this
               isn't just work for me, its fun and its a part of my life that i
               continue to enjoy.
             </p>
@@ -33,7 +33,7 @@ function About() {
                 className="download__link"
                 download=""
                 to="assets/resume.pdf">
-                Download <i class="far fa-cloud-download-alt"></i>
+                Resume <i class="far fa-cloud-download-alt"></i>
               </NavLink>
             </div>
           </div>
