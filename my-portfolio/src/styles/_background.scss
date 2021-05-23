@@ -3,7 +3,7 @@
   width: 100vw;
   //   background-color: black;
   position: fixed;
-  z-index: -2;
+  z-index: 2;
   .bubbles {
     position: absolute;
     width: 100%;
@@ -15,7 +15,7 @@
     .bubble {
       position: absolute;
       bottom: 0;
-      background-color: rgba(58, 75, 153, 0.2);
+      background-color: rgba(58, 75, 153, 0.1);
       border-radius: 50%;
       animation: flying_bubble 10s infinite ease-in-out;
       &:nth-child(1) {
@@ -100,7 +100,7 @@
       width: 220px;
       height: 220px;
       left: 20%;
-      background-color: rgba(58, 75, 153, 0.2);
+      background-color: rgba(58, 75, 153, 0.1);
       border-radius: 50%;
       animation: flying_bubblen 10s infinite ease-in-out;
       

@@ -35,6 +35,7 @@
         flex-direction: column;
         margin-left: 250px;
         text-align: start;
+        z-index: 4;
         @media (max-width: 1690px) {
           margin-left: 0px;
           @media (max-width: 990px) {
@@ -145,7 +146,7 @@
             background-color: red;
             border-top: solid 5px red;
             border-radius: 50%;
-            z-index: -1;
+
             animation: rotateb 4s infinite;
             animation-timing-function: linear;
             opacity: 0;
@@ -175,7 +176,6 @@
             background-color: purple;
             border-top: solid 5px purple;
             border-radius: 50%;
-            z-index: -1;
             animation: rotatea 4s infinite;
             animation-timing-function: linear;
             opacity: 0;
@@ -188,7 +188,6 @@
           width: 27rem;
           height: 27rem;
           margin-right: 150px;
-          // margin-top: 30px;
           @media (max-width: 1690px) {
             width: 15rem;
             height: 15rem;
