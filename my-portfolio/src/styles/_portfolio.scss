@@ -1,0 +1,15 @@
+.portfolio {
+    width: 100%;
+  .portfolio__heading {
+    margin: 0px 0px 100px 40%;
+    @media (max-width:1000px) {
+      margin: 0px 0px 30px 20px;
+    }
+  }
+  .portfolio__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

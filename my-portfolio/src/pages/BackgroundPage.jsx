@@ -15,11 +15,6 @@ function BackgroundPage() {
                 <div className="bubble"></div>
                 <div className="bubble"></div>
                 <div className="bubblen"></div>
-                <div className="bubblen"></div>
-                <div className="bubblen"></div>
-                <div className="bubblen"></div>
-                <div className="bubblen"></div>
-                <div className="bubblen"></div>
             </div>
         </div>
     )
