@@ -16,7 +16,7 @@ import html_icon from "../images/html.png";
 function Slide() {
   return (
     <div className="slide">
-      <h2>Languages, Tools And Frameworks</h2>
+      <h2>Tools, Frameworks And Liberies</h2>
       <div className="slide__wrapper">
         <div className="block"></div>
         <div className="slide__track">

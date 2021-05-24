@@ -163,8 +163,7 @@
           border-top: solid 5px purple;
           border-radius: 50%;
           z-index: -1;
-          animation: rotatea 4s infinite;
-          animation-timing-function: linear;
+          animation: rotatea 4s linear infinite;
           opacity: 0;
           @media (max-width: 1690px) {
             content: "";

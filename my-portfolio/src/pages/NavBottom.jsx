@@ -17,12 +17,11 @@ function NavBottom() {
         <NavLink to="/" className="nav__name">
           Darryl
         </NavLink>
-        <div className={navMenuClass.join(" ")}>
+        <div className={`nav__menu ${navToggle && "shownavmenu"}`}>
           <ul className="nav__gridlist">
             <li className="nav__item">
               <NavLink
                 className="nav__link"
-                onClick={toggleNavMenu}
                 onClick={toggleNavMenu}
                 to="/">
                 <i class="far fa-home"></i>
@@ -32,7 +31,6 @@ function NavBottom() {
             <li className="nav__item">
               <NavLink
                 className="nav__link"
-                onClick={toggleNavMenu}
                 onClick={toggleNavMenu}
                 to="/about">
                 <i class="far fa-user"></i>

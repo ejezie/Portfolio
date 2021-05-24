@@ -31,7 +31,7 @@ function About() {
             <div className="about__download">
               <NavLink
                 className="download__link"
-                download=""
+                download
                 to="assets/resume.pdf">
                 Resume <i class="far fa-cloud-download-alt"></i>
               </NavLink>
