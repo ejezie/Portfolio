@@ -29,9 +29,9 @@ function SkillsPage() {
           <Title title={"MY SKILLS"} span={"MY SKILLS"} />
         </div>
         <div className="skills__container">
-          <i
+          {/* <i
             class="fas fa-angle-down skills__arrow"
-            onClick={(handleArrowToggle, handleSkillToggle)}></i>
+            onClick={(handleArrowToggle, handleSkillToggle)}></i> */}
           <div className="skills__content">
             <div className="skills__header">
               <i class="fas fa-code skills__icon"></i>

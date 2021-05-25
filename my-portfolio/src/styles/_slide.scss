@@ -21,19 +21,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
     @media (max-width: 885px) {
       // margin-top: -50px;
-    }
-    .block {
-      width: 10rem;
-      height: 12rem;
-      background-color: blue;
-      z-index: 3;
-    }
-    .block__two {
-      width: 10rem;
-      height: 12rem;
-      background-color: blueviolet;
     }
     &::before {
       background: linear-gradient(
