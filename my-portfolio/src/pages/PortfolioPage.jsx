@@ -16,12 +16,36 @@ function PortfolioPage() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const items = [
-    { name: mewzik, text: " httml, css and javascript" },
-    { name: movies, text: " httml, css and javascript" },
-    { name: house, text: " httml, css and javascript" },
-    { name: port, text: " httml, css and javascript" },
-    { name: dora, text: " httml, css and javascript" },
-    { name: webp, text: " httml, css and javascript" },
+    {
+      name: mewzik,
+      text: " httml, css and javascript",
+      view: "https://mewzik.vercel.app/",
+    },
+    {
+      name: movies,
+      text: " httml, css and javascript",
+      view: "https://movies-hub.vercel.app/",
+    },
+    {
+      name: house,
+      text: " httml, css and javascript",
+      view: "https://github.com/ejezie",
+    },
+    {
+      name: port,
+      text: " httml, css and javascript",
+      view: "https://github.com/ejezie",
+    },
+    {
+      name: dora,
+      text: " httml, css and javascript",
+      view: "https://github.com/ejezie",
+    },
+    {
+      name: webp,
+      text: " httml, css and javascript",
+      view: "https://ejezie.github.io/web-project2/",
+    },
   ];
   const slides = items.map((item) => (
     <SwiperSlide
@@ -32,6 +56,9 @@ function PortfolioPage() {
       <img src={item.name} alt="" className="slide__image" />
       <div className="image__hover">
         <p>{item.text}</p>
+        <div className="view__project">
+          <a href={item.view}>VIEW PROJECT</a>
+        </div>
       </div>
     </SwiperSlide>
   ));

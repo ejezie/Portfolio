@@ -21,7 +21,7 @@
       position: relative;
       object-fit: contain;
       background-color: #29335f;
-      margin-left: 7%;
+      margin-left: 0%;
       height: 70vh;
       width: 60vw;
 
@@ -32,21 +32,41 @@
       }
     }
     .image__hover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       height: 70vh;
-      width: 60vh;
+      width: 60vw;
       position: absolute;
-      margin-left: 12%;
-      background-color: rgb(41, 51, 95, 0.5);
+      margin-left: 0%;
+      background-color: rgb(41, 51, 95, 0.6);
       padding: 25px;
+      color: white;
       opacity: 0;
       top: 0;
       left: 0;
+      text-align: center;
+      p {
+        font-size: 1.2rem;
+      }
+      .view__project {
+        background-color: rgb(255, 255, 255, 0.9);
+        color: #29335f;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        a{
+          text-decoration: none;
+          color: #29335f;
+        }
+      }
       @media (max-width: 950px) {
         margin-left: 0px;
         height: 50vh;
         width: 80vw;
       }
-      transition: all 1s 1.3s;
+      transition: all 1s;
       &:hover {
         opacity: 1;
       }
@@ -56,8 +76,9 @@
 .swiper-container {
   margin-top: 100px;
   box-shadow: -5px 5px 6px black, 5px 5px 6px rgb(0, 0, 0);
-  width: 70%;
+  width: 60%;
   background-color: #29335f;
+  border-radius: 7px;
   @media (max-width: 950px) {
     width: 80%;
   }
