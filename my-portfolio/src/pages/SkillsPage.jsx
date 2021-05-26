@@ -1,27 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Title from "../components/Title";
-import Slide from "../components/Slide"
+import Slide from "../components/Slide";
 
 function SkillsPage() {
-  const [skill, setSkill] = useState(false);
-  const [arrow, setArrow] = useState(false);
-
-  const skillsListClasses = ["skills__list"];
-  const skillsArrowClasses = ["arrow__open"];
-  if (skill) {
-    skillsListClasses.push("close__skill");
-  }
-  if (arrow) {
-    skillsArrowClasses.push("arrow__open");
-  }
-
-  const handleSkillToggle = () => {
-    setSkill(!skill);
-  };
-  const handleArrowToggle = () => {
-    setArrow(!arrow);
-  };
-
   return (
     <div className="skills">
       <div className="skills__wrapper">
@@ -29,18 +10,12 @@ function SkillsPage() {
           <Title title={"MY SKILLS"} span={"MY SKILLS"} />
         </div>
         <div className="skills__container">
-          {/* <i
-            class="fas fa-angle-down skills__arrow"
-            onClick={(handleArrowToggle, handleSkillToggle)}></i> */}
           <div className="skills__content">
             <div className="skills__header">
               <i class="fas fa-code skills__icon"></i>
               <h2>Frontend Developer</h2>
-              {/* <i
-                class="fas fa-angle-down skills__arrow"
-                onClick={handleSkillToggle}></i> */}
             </div>
-            <div className={skillsListClasses.join(" ")}>
+            <div className="skills__list">
               <div className="skills__data">
                 <div className="skills__title">
                   <h3 className="skills__name">HTML</h3>
@@ -98,7 +73,7 @@ function SkillsPage() {
               <i class="fas fa-server skills__icon icon__two"></i>
               <h2>Backend Developer</h2>
             </div>
-            <div className={skillsListClasses.join(" ")}>
+            <div className="skills__list">
               <div className="skills__data">
                 <div className="skills__title">
                   <h3 className="skills__name">Node Js</h3>
@@ -152,7 +127,7 @@ function SkillsPage() {
           </div>
         </div>
       </div>
-      <Slide/>
+      <Slide />
     </div>
   );
 }

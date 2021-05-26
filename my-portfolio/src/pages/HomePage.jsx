@@ -6,7 +6,6 @@ import me from "../images/me.png";
 function HomePage() {
   return (
     <div className="homepage">
-      <CanvasText />
       <div className="home__wrap">
         <div className="home__content">
           <div className="home__text">

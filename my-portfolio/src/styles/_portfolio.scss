@@ -1,57 +1,64 @@
 .portfolio {
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  .thumb__image {
+    cursor: pointer;
+    object-fit: cover;
+    margin-left: 1%;
+    height: 8rem;
+    width: 10rem;
+    box-shadow: -5px 5px 6px black, 5px 5px 6px rgb(0, 0, 0);
+  }
   .portfolio__heading {
     margin: 0px 0px 100px 40%;
     @media (max-width: 1000px) {
       margin: 0px 0px 30px 20px;
     }
   }
-  i {
-    font-size: 3rem;
-    cursor: pointer;
-    margin-right: 50px;
-    margin-top: 50px;
-  }
-  .portfolio__wrap {
-    display: flex;
-    overflow-x: hidden;
-    // align-items: center;
-    // justify-content: center;
-    .image__wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .image__wrapper {
+    position: relative;
+    .slide__image {
       position: relative;
-      // padding: 20px;
-      .image__slide {
-        height: 45vh;
-        width: 45vw;
-        position: relative;
-        cursor: pointer;
-        // margin-right: 10px;
-        object-fit: contain;
-        @media (max-width: 990px) {
-          height: 45vh;
-          width: 45vw;
-        }
-      }
-      .image__hover {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 45vh;
-        width: 45vw;
-        position: absolute;
-        background-color: rgb(41, 51, 95, 0.8);
-        padding: 25px;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        transition: all 1s 2s;
-        &:hover {
-          opacity: 1;
-        }
+      object-fit: contain;
+      background-color: #29335f;
+      margin-left: 7%;
+      height: 70vh;
+      width: 60vw;
+
+      @media (max-width: 950px) {
+        margin-left: 0px;
+        height: 50vh;
+        width: 80vw;
       }
     }
+    .image__hover {
+      height: 70vh;
+      width: 60vh;
+      position: absolute;
+      margin-left: 12%;
+      background-color: rgb(41, 51, 95, 0.5);
+      padding: 25px;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      @media (max-width: 950px) {
+        margin-left: 0px;
+        height: 50vh;
+        width: 80vw;
+      }
+      transition: all 1s 1.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.swiper-container {
+  margin-top: 100px;
+  box-shadow: -5px 5px 6px black, 5px 5px 6px rgb(0, 0, 0);
+  width: 70%;
+  background-color: #29335f;
+  @media (max-width: 950px) {
+    width: 80%;
   }
 }
