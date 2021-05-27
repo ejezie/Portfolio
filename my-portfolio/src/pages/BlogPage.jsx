@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "react-loader-spinner";
 import Title from "../components/Title";
 
 function Blog() {
@@ -8,7 +9,14 @@ function Blog() {
         <Title title={"blogpage"} span={"blogpage"} />
       </div>
       <div className="blog__wrapper">
-          <div className="blog__content">Coming Soon</div>
+        <Loader
+          type="BallTriangle"
+          color="#29335f"
+          height={60}
+          width={60}
+          className="loader"
+        />
+        <div className="blog__content">Coming Soon</div>
       </div>
     </div>
   );

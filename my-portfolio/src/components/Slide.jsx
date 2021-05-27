@@ -16,7 +16,10 @@ import html_icon from "../images/html.png";
 function Slide() {
   return (
     <div className="slide">
-      <h2>Tools, Frameworks And Liberies</h2>
+      <div className="slide__title">
+        <h2>Tools, Frameworks And Liberies</h2>
+        {/* <i class="fad fa-toolbox toolbox"></i> */}
+      </div>
       <div className="slide__wrapper">
         <div className="block"></div>
         <div className="slide__track">

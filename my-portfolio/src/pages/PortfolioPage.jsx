@@ -18,32 +18,32 @@ function PortfolioPage() {
   const items = [
     {
       name: mewzik,
-      text: " httml, css and javascript",
+      text: "Tools: HTML, CSS, React, Context API...",
       view: "https://mewzik.vercel.app/",
     },
     {
       name: movies,
-      text: " httml, css and javascript",
+      text: " HTML, CSS, React and Axios...",
       view: "https://movies-hub.vercel.app/",
     },
     {
       name: house,
-      text: " httml, css and javascript",
+      text: " HTML, CSS and Javascript",
       view: "https://github.com/ejezie",
     },
     {
       name: port,
-      text: " httml, css and javascript",
+      text: " HTML, SCSS and React ",
       view: "https://github.com/ejezie",
     },
     {
       name: dora,
-      text: " httml, css and javascript",
+      text: " HTML, CSS and Javascript",
       view: "https://github.com/ejezie",
     },
     {
       name: webp,
-      text: " httml, css and javascript",
+      text: " HTML, CSS and Javascript",
       view: "https://ejezie.github.io/web-project2/",
     },
   ];
@@ -53,12 +53,18 @@ function PortfolioPage() {
       tag="li"
       className="image__wrapper"
       style={{ listStyle: "none" }}>
-      <img src={item.name} alt="" className="slide__image" />
-      <div className="image__hover">
-        <p>{item.text}</p>
-        <div className="view__project">
-          <a href={item.view}>VIEW PROJECT</a>
+      <div className="image__portion">
+        <img src={item.name} alt="" className="slide__image" />
+        <div className="image__hover">
+          <div className="view__project">
+            <a href={item.view}>VIEW PROJECT</a>
+          </div>
         </div>
+      </div>
+      <div className="text__portion">
+        <h2 className="text__portion__header"> WEB APPLICATION</h2>
+        <p>{item.text}</p>
+        <div className="slide__button"><a href={item.view}>See Demo</a></div>
       </div>
     </SwiperSlide>
   ));
@@ -81,16 +87,16 @@ function PortfolioPage() {
         tag="section"
         wrapperTag="ul"
         navigation
-        pagination
         thumbs={{ swiper: thumbsSwiper }}
         slidesPerView={1}>
         {slides}
       </Swiper>
       {/* <Swiper
         id="thumbs"
+        className = "thumbnail"
         onSwiper={setThumbsSwiper}
         spaceBetween={0}
-        slidesPerView={4}>
+        slidesPerView={6}>
         {thumbs}
       </Swiper> */}
     </div>

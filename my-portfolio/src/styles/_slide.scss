@@ -1,16 +1,30 @@
 .slide {
   overflow: hidden;
-  h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    @media (max-width: 990px) {
-      font-size: 1.7rem;
+  .slide__title{
+    display: flex;
+    align-items: center;
+    .toolbox{
+      font-size: 2.5rem;
+      color: #29335f;
+      margin-left: 32%;
     }
-    @media (max-width: 690px) {
-      font-size: 1.4rem;
-    }
-    @media (max-width: 690px) {
-      font-size: 1.1rem;
+    h2 {
+      // text-align: center;
+      margin: 0px 0px 50px 14.9%;
+      @media (max-width: 1200px) {
+        margin: 0px 0px 10px 12%;
+      }
+      font-size: 1.8rem;
+      font-weight: 400;
+      @media (max-width: 990px) {
+        font-size: 1.7rem;
+      }
+      @media (max-width: 690px) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: 690px) {
+        font-size: 1.1rem;
+      }
     }
   }
   .slide__wrapper {
@@ -21,9 +35,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -1;
-    @media (max-width: 885px) {
+    z-index: -2;
+    
+    @media (max-width: 575px) {
       // margin-top: -50px;
+      border-bottom: solid 1px rgb(41, 51, 95, 0.08);
     }
     &::before {
       background: linear-gradient(
@@ -54,7 +70,7 @@
       height: 200px;
       position: absolute;
       width: 35%;
-      z-index: 1;
+      z-index: 0;
       top: 0;
       right: 0;
       @media (max-width: 400px) {
@@ -68,7 +84,6 @@
       width: 80%;
       margin-left: 1600px;
       animation: slide_scroll 20s linear infinite;
-      //   background-color: black;
       place-items: center;
       .slide__languages {
         height: 200px;
