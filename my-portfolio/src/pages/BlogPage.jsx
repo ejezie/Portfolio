@@ -9,14 +9,10 @@ function Blog() {
         <Title title={"blogpage"} span={"blogpage"} />
       </div>
       <div className="blog__wrapper">
-        <Loader
-          type="BallTriangle"
-          color="#29335f"
-          height={60}
-          width={60}
-          className="loader"
-        />
-        <div className="blog__content">Coming Soon</div>
+        <div className="blog__content">
+          Coming Soon<div className="content__effect"></div>
+          <div className="content__effects"></div>
+        </div>
       </div>
     </div>
   );
