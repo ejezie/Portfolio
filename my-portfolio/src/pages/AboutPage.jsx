@@ -2,11 +2,10 @@ import React from "react";
 import Title from "../components/Title";
 import laptop from "../images/lap.png";
 import screen from "../images/code.gif";
-import { NavLink } from "react-router-dom";
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about__wrap">
         <div className="about__title">
           <Title title={"About Me"} span={"About me"} />
@@ -29,20 +28,25 @@ function About() {
               continue to enjoy.
             </p>
             <div className="about__download">
-              <NavLink
-                className="download__link"
-                download
-                to="assets/resume.pdf">
+              <a className="download__link" download href="assets/resume.pdf">
                 Resume <i class="far fa-cloud-download-alt"></i>
-              </NavLink>
+              </a>
             </div>
           </div>
         </div>
         <div className="social__link">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-twitter-square"></i></a>
-          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-facebook-square"></i>
+          </a>
         </div>
       </div>
     </div>

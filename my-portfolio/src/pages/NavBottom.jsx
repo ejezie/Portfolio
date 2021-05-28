@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function NavBottom() {
   const [navToggle, setNavToggle] = useState(false);
@@ -14,52 +14,76 @@ function NavBottom() {
   return (
     <div className="navbottom">
       <nav className="bottom__navwrap">
-        <NavLink to="/" className="nav__name">
+        <Link to="home" smooth={true} duration={1000} className="nav__name">
           Darryl
-        </NavLink>
+        </Link>
         <div className={`nav__menu ${navToggle && "shownavmenu"}`}>
           <ul className="nav__gridlist">
             <li className="nav__item">
-              <NavLink
+              <Link
+                smooth={true}
+                duration={1000}
                 className="nav__link"
                 onClick={toggleNavMenu}
-                to="/">
+                to="home">
                 <i class="far fa-home"></i>
                 <p>Home</p>
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__item">
-              <NavLink
+              <Link
+                smooth={true}
+                duration={1000}
                 className="nav__link"
                 onClick={toggleNavMenu}
-                to="/about">
+                to="about">
                 <i class="far fa-user"></i>
                 <p>About</p>
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__item">
-              <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
+              <Link
+                smooth={true}
+                duration={1000}
+                className="nav__link"
+                onClick={toggleNavMenu}
+                to="blog">
                 <i class="far fa-file-alt"></i>
                 <p>Blog</p>
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__item">
-              <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
+              <Link
+                smooth={true}
+                duration={1000}
+                className="nav__link"
+                onClick={toggleNavMenu}
+                to="skills">
                 <i class="far fa-tools"></i>
                 <p>Skills</p>
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__item">
-              <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
+              <Link
+                smooth={true}
+                duration={1000}
+                className="nav__link"
+                onClick={toggleNavMenu}
+                to="portfolio">
                 <i class="far fa-image"></i>
                 <p>Portfolio</p>
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__item">
-              <NavLink className="nav__link" onClick={toggleNavMenu} to="/">
+              <Link
+                smooth={true}
+                duration={1000}
+                className="nav__link"
+                onClick={toggleNavMenu}
+                to="contact">
                 <i class="far fa-envelope-open-text"></i>
                 <p>Contact</p>
-              </NavLink>
+              </Link>
             </li>
           </ul>
           <i class="fas fa-times nav__close" onClick={toggleNavMenu}></i>

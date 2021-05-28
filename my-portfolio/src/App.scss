@@ -18,11 +18,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.4em;
   color: #29335f;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   overflow-x: hidden;
   // background-color: #090a11;
 }

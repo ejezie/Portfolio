@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
@@ -12,26 +12,17 @@ import BackgroundPage from "./pages/BackgroundPage";
 
 function App() {
   return (
-    <Router>
-      <BackgroundPage/>
+    <>
+      <BackgroundPage />
       <NavTop />
       <NavBottom />
       <HomePage />
       <AboutPage />
       <SkillsPage />
-      <PortfolioPage/>
-      <BlogPage/>
-      <main>
-        <Switch>
-          <Route exact path="/" />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/skills" component={SkillsPage} />
-          <Route exact path="/portfolio" component={PortfolioPage} />
-          <Route exact path="/blog" component={BlogPage} />
-          <Route exact path="/contact" component={ContactPage} />
-        </Switch>
-      </main>
-    </Router>
+      <PortfolioPage />
+      <BlogPage />
+      {/* <ContactPage /> */}
+    </>
   );
 }
 

@@ -16,7 +16,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      @media (max-width:730px) {
+      @media (max-width: 730px) {
         flex-direction: column-reverse;
       }
       .home__text {
@@ -80,6 +80,7 @@
           .scroll__p,
           .arrow {
             margin-right: 8px;
+            cursor: pointer;
           }
           .arrow {
             //   transition: all ease;

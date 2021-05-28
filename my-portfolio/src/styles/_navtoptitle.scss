@@ -1,43 +1,44 @@
 .navtoptitle {
-    font-size: 1.25rem;
-    position: relative;
-    padding-bottom: 2px;
-    color: #29335f;
-  
-    &::before {
-      content: "";
-      bottom: 0;
-      left: 0;
-      position: absolute;
+  font-size: 1.25rem;
+  position: relative;
+  padding-bottom: 2px;
+  color: #29335f;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 4rem;
+    height: 0.2rem;
+    background-color: royalblue;
+    border-radius: 10px;
+    opacity: 0.8;
+    overflow: hidden;
+    animation: moves 2s 1s ease-in;
+  }
+  &::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: rgb(21, 34, 73);
+    border-radius: 10px 0px 10px 10px;
+    opacity: 0.8;
+    animation: moves 2s 1s ease-in;
+  }
+  @keyframes moves {
+    0% {
+      width: 1rem;
+    }
+    40% {
       width: 4rem;
-      height: 0.2rem;
-      background-color: royalblue;
-      border-radius: 10px;
-      opacity: 0.8;
-      overflow: hidden;
-      animation: moves 2s 1s ease-in;
     }
-    &::after {
-      content: "";
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      width: 1.5rem;
-      height: 0.2rem;
-      background-color: rgb(21, 34, 73);
-      border-radius: 10px 0px 10px 10px;
-      opacity: 0.8;
-      animation: moves 2s 1s ease-in;
-    }
-    @keyframes moves {
-      0% {
-        width: 1rem;
-      }
-      40% {
-        width: 4rem;
-      }
-      100% {
-        opacity: 1;
-      }
+    100% {
+      opacity: 1;
     }
   }
+}

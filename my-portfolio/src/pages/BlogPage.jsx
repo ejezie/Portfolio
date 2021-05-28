@@ -4,7 +4,7 @@ import Title from "../components/Title";
 
 function Blog() {
   return (
-    <div className="blog">
+    <div className="blog" id="blog">
       <div className="blog__heading">
         <Title title={"blogpage"} span={"blogpage"} />
       </div>

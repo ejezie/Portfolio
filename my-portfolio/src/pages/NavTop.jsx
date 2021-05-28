@@ -1,6 +1,6 @@
 import React from "react";
 import NavTopTitle from "../components/NavTopTitle";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function NavTop() {
   return (
@@ -12,24 +12,24 @@ function NavTop() {
         </div>
         <div className="right">
           <div className="navtop__sub">
-            <NavLink to="/">
-              <NavTopTitle name={"Home"} />
-            </NavLink>
-            <NavLink to="/about">
-              <NavTopTitle name={"About"} />
-            </NavLink>
-            <NavLink to="/skills">
-              <NavTopTitle name={"Skills"} />
-            </NavLink>
-            <NavLink to="/blog">
-              <NavTopTitle name={"Blog"} />
-            </NavLink>
-            <NavLink to="/portfolio">
-              <NavTopTitle name={"Portfolio"} />
-            </NavLink>
-            <NavLink to="/contact">
-              <NavTopTitle name={"Contact"} />
-            </NavLink>
+            <Link smooth={true} to="home">
+              <NavTopTitle name={"Home"} id={"home"} />
+            </Link>
+            <Link smooth={true} to="/about">
+              <NavTopTitle name={"About"} id={"about"} />
+            </Link>
+            <Link smooth={true} to="/skills">
+              <NavTopTitle name={"Skills"} id={"skills"} />
+            </Link>
+            <Link smooth={true} to="/blog">
+              <NavTopTitle name={"Blog"} id={"blog"} />
+            </Link>
+            <Link smooth={true} to="/portfolio">
+              <NavTopTitle name={"Portfolio"} id={"portfolio"} />
+            </Link>
+            <Link smooth={true} to="/contact">
+              <NavTopTitle name={"Contact"} id={"contact"} />
+            </Link>
           </div>
           <div className="moon__sun">
             <div className="moon"></div>

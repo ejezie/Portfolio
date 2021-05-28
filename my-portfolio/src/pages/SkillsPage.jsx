@@ -4,7 +4,7 @@ import Slide from "../components/Slide";
 
 function SkillsPage() {
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <div className="skills__wrapper">
         <div className="skills__heading">
           <Title title={"MY SKILLS"} span={"MY SKILLS"} />

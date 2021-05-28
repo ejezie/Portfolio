@@ -64,7 +64,9 @@ function PortfolioPage() {
       <div className="text__portion">
         <h2 className="text__portion__header"> WEB APPLICATION</h2>
         <p>{item.text}</p>
-        <div className="slide__button"><a href={item.view}>See Demo</a></div>
+        <div className="slide__button">
+          <a href={item.view}>See Demo</a>
+        </div>
       </div>
     </SwiperSlide>
   ));
@@ -78,7 +80,7 @@ function PortfolioPage() {
   ));
 
   return (
-    <div className="portfolio">
+    <div className="portfolio" id="portfolio">
       <div className="portfolio__heading">
         <Title title={"PORTFOLIO"} span={"PORTFOLIO"} />
       </div>

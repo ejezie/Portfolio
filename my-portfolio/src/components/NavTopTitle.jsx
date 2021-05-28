@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-scroll";
 
-function NavTopTitle({ name }) {
+function NavTopTitle({ name, id }) {
   return (
     <div>
-      <div className="navtoptitle">
-        {name}
-      </div>
+      <Link to={id} smooth={true} duration={1000} delay={0}>
+        <div className="navtoptitle">{name}</div>
+      </Link>
     </div>
   );
 }
