@@ -10,8 +10,12 @@ function Blog() {
       </div>
       <div className="blog__wrapper">
         <div className="blog__content">
-          Coming Soon<div className="content__effect"></div>
-          <div className="content__effects"></div>
+         <p>Coming Soon</p>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
         </div>
       </div>
     </div>
