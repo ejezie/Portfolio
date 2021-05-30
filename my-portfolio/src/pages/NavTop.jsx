@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import NavTopTitle from "../components/NavTopTitle";
 import { Link } from "react-scroll";
 
-function NavTop() {
+function NavTop({ switchTheme }) {
+const [star, setStar] = useState('reveal');
+
+const m
+
   return (
     <div className="navtop">
       <div className="navtop__wrap">
@@ -33,7 +37,7 @@ function NavTop() {
           </div>
           <div className="moon__sun">
             <div className="moon"></div>
-            <div className="sun"></div>
+            <div className="sun" onClick={switchTheme}></div>
           </div>
         </div>
       </div>

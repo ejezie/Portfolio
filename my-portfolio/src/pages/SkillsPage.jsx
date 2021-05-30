@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../components/Title";
 import Slide from "../components/Slide";
 
-function SkillsPage() {
+function SkillsPage({switchTheme}) {
   return (
     <div className="skills" id="skills">
       <div className="skills__wrapper">
@@ -127,7 +127,7 @@ function SkillsPage() {
           </div>
         </div>
       </div>
-      <Slide />
+      <Slide theme={switchTheme}/>
     </div>
   );
 }

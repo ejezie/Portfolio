@@ -66,6 +66,9 @@
             0 0 5px rgb(252, 252, 5);
           animation: animateboth 45s linear infinite;
         }
+        .reveal{
+          z-index: 1;
+        }
       }
     }
   }
