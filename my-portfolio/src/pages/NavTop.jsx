@@ -5,8 +5,6 @@ import { Link } from "react-scroll";
 function NavTop({ switchTheme }) {
 const [star, setStar] = useState('reveal');
 
-const m
-
   return (
     <div className="navtop">
       <div className="navtop__wrap">
