@@ -89,6 +89,7 @@ function PortfolioPage() {
         tag="section"
         wrapperTag="ul"
         navigation
+        pagination
         thumbs={{ swiper: thumbsSwiper }}
         slidesPerView={1}>
         {slides}

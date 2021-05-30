@@ -18,23 +18,24 @@
     @media (max-width: 600px) {
       flex-direction: column;
     }
-    .text__portion{
+    .text__portion {
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+      margin-right: 6%;
+
       @media (max-width: 1200px) {
-        // margin: 50px 0px 0px 0px;
         font-size: 1.2rem;
       }
       @media (max-width: 1000px) {
-        margin: 50px 0px 0px 0px;
         font-size: 1.1rem;
+        margin-right: 0%;
       }
       @media (max-width: 500px) {
         font-size: 1rem;
+        margin: 50px 0px 0px 0px;
       }
-      .slide__button{
+      .slide__button {
         background-color: #29335f;
         padding: 8px;
         text-align: center;
@@ -42,41 +43,36 @@
         border-radius: 4px;
         width: 75%;
         margin-top: 15px;
-        a{
+        a {
           text-decoration: none;
           color: white;
         }
-        &:hover{
+        &:hover {
           background-color: #180f2e;
         }
         @media (max-width: 1000px) {
           font-size: 1rem;
         }
-    }
+      }
     }
     .slide__image {
       position: relative;
       // object-fit: contain;
       border-radius: 15px;
-      margin-left: 0%;
+      margin-left: 15%;
       object-fit: cover;
       height: 35vh;
       width: 35vw;
+      @media (max-width: 1200px) {
+        margin-left: 0%;
+      }
       @media (max-width: 1000px) {
         margin-left: 0%;
-        border-radius: 1px;
+        border-radius: 8px;
         height: 40vh;
         width: 40vw;
       }
-      @media (max-width: 710px) {
-        // margin-left: 0%;
-        // border-radius: 1px;
-        // height: 55vh;
-        // width: 80vw;
-      }
-
       @media (max-width: 565px) {
-        border-radius: 1px;
         height: 35vh;
         width: 80vw;
       }
@@ -146,17 +142,32 @@
   @media (max-width: 1000px) {
     width: 100%;
   }
-  .swiper-button-prev{
+  .swiper-button-prev {
     color: #29335f;
     @media (max-width: 1000px) {
       color: rgb(41, 51, 95, 0.5);
     }
   }
-  .swiper-button-next{
+  .swiper-button-next {
     color: #29335f;
     @media (max-width: 1000px) {
       color: rgb(41, 51, 95, 0.5);
+    }
+  }
+  .swiper-pagination {
+    margin-bottom: 25%;
+    @media (max-width: 925px) {
+      margin-bottom: 30%;
+    }
+    @media (max-width: 745px) {
+      display: none;
+    }
+    @media (max-width: 440px) {
+      display: block;
+      margin-top: 95%;
+    }
+    .swiper-pagination-bullet {
+      color: #29335f;
     }
   }
 }
-

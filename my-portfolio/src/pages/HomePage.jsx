@@ -12,13 +12,13 @@ function HomePage() {
             <h2>Hi, I AM DARRYL </h2>
             <p className="describe__p">
               An enthusiatic frontend developer with a good eye for simple
-              elegant user friendly designs...
+              elegant user friendly designs
             </p>
             <Link
               to="contact"
               smooth={true}
               duration={1000}
-              className="contact">
+              className="contact__home">
               Contact me<i class="fal fa-paper-plane send"></i>
             </Link>
             <Link to="about" smooth={true} duration={1000} className="scroll">

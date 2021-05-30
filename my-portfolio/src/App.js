@@ -9,6 +9,7 @@ import NavBottom from "./pages/NavBottom";
 import NavTop from "./pages/NavTop";
 import SkillsPage from "./pages/SkillsPage";
 import BackgroundPage from "./pages/BackgroundPage";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       <SkillsPage />
       <PortfolioPage />
       <BlogPage />
-      {/* <ContactPage /> */}
+      <ContactPage />
+      <Footer/>
     </>
   );
 }
