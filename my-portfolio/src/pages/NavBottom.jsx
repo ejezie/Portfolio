@@ -3,11 +3,6 @@ import { Link } from "react-scroll";
 
 function NavBottom({ isDark }) {
   const [navToggle, setNavToggle] = useState(false);
-
-  let navMenuClass = ["nav__menu"];
-  if (navToggle) {
-    navMenuClass.push("shownavmenu");
-  }
   const toggleNavMenu = () => {
     setNavToggle(!navToggle);
   };

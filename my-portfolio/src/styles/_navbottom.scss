@@ -73,7 +73,7 @@
     }
   }
   @media screen and (max-width: 730px) {
-    .bottom__navwrap{
+    .bottom__navwrap {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -97,7 +97,6 @@
     }
   }
 }
-
 
 .navbottomdark {
   position: fixed;
@@ -136,7 +135,7 @@
       font-size: 0.85rem;
       font-weight: 700;
       z-index: 2;
-      background-color: white;
+      background-color: rgb(9, 10, 17);
       .nav__gridlist {
         list-style: none;
         display: grid;
@@ -174,7 +173,7 @@
     }
   }
   @media screen and (max-width: 730px) {
-    .bottom__navwrap{
+    .bottom__navwrap {
       display: flex;
       justify-content: space-between;
       align-items: center;

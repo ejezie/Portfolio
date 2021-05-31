@@ -66,7 +66,7 @@
             0 0 5px rgb(252, 252, 5);
           animation: animateboth 45s linear infinite;
         }
-        .reveal {
+        .showstar {
           z-index: 1;
         }
       }
@@ -151,11 +151,11 @@
           background-size: cover;
           border-radius: 50%;
           box-shadow: inset 0px 0px 0.5px rgb(0, 0, 0, 0.1),
-            0 0 5px rgb(252, 252, 5);
+            0 0 0px rgb(252, 252, 5);
           animation: animateboth 45s linear infinite;
         }
-        .reveal {
-          z-index: 1;
+        .showstar {
+          z-index: -1;
         }
       }
     }

@@ -21,12 +21,12 @@ const GlobalStyle = createGlobalStyle`
 
 function Slide({ isDark }) {
   return (
-    <div className="slide">
+    <div className={`${isDark ? "slidedark":"slide"}`}>
       <div className="slide__title">
         <h2>Tools, Frameworks And Liberies</h2>
         {/* <i class="fad fa-toolbox toolbox"></i> */}
       </div>
-      <div className={`${isDark ? "slide__wrapperdark":"slide__wrapper"}`}>
+      <div className="slide__wrapper">
         <div className="block"></div>
         <div className="slide__track">
           <div className="slide__languages">

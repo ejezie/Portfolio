@@ -94,7 +94,45 @@
       }
     }
   }
-  .slide__wrapperdark {
+  @keyframes slide_scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-740px * 4));
+    }
+  }
+}
+.slidedark {
+  overflow: hidden;
+  .slide__title{
+    display: flex;
+    align-items: center;
+    .toolbox{
+      font-size: 2.5rem;
+      color: #29335f;
+      margin-left: 32%;
+    }
+    h2 {
+      // text-align: center;
+      margin: 0px 0px 50px 14.9%;
+      @media (max-width: 1200px) {
+        margin: 0px 0px 10px 12%;
+      }
+      font-size: 1.8rem;
+      font-weight: 400;
+      @media (max-width: 990px) {
+        font-size: 1.7rem;
+      }
+      @media (max-width: 690px) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: 690px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .slide__wrapper {
     height: 120px;
     margin: auto;
     position: relative;

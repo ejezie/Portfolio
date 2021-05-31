@@ -3,7 +3,7 @@ import NavTopTitle from "../components/NavTopTitle";
 import { Link } from "react-scroll";
 
 function NavTop({ isDark, setDark }) {
-  const [star, setStar] = useState("reveal");
+  const [star, setStar] = useState("showstar");
 
   return (
     <div className={`${isDark ? "navtopdark" : "navtop"}`}>
@@ -34,9 +34,13 @@ function NavTop({ isDark, setDark }) {
             </Link>
           </div>
           <div className="moon__sun">
-            <div className="moon"></div>
             <div
-              className="sun"
+              className="moon"
+              onClick={() => {
+                setDark(!isDark);
+              }}></div>
+            <div
+              className={`sun ${isDark && "showstar"}`}
               onClick={() => {
                 setDark(!isDark);
               }}></div>
