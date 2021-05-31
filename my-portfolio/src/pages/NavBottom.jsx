@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 
-function NavBottom() {
+function NavBottom({ isDark }) {
   const [navToggle, setNavToggle] = useState(false);
 
   let navMenuClass = ["nav__menu"];
@@ -12,7 +12,7 @@ function NavBottom() {
     setNavToggle(!navToggle);
   };
   return (
-    <div className="navbottom">
+    <div className={`${isDark ? "navbottomdark" : "navbottom"}`}>
       <nav className="bottom__navwrap">
         <Link to="home" smooth={true} duration={1000} className="nav__name">
           Darryl

@@ -15,19 +15,22 @@
 @import "./styles/contact";
 @import "./styles/footer";
 
+$base-color: #3f4e91;
+$hover-color: #4f5fa8;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  $base-color: #3f4e91;
+  $hover-color: #4f5fa8;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.4em;
-  color: #29335f;
-  // scroll-behavior: smooth;
+  color: $base-color;
   overflow-x: hidden;
-  // background-color: #090a11;
 }
 span {
   // color: #29335f;

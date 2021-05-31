@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import NavTopTitle from "../components/NavTopTitle";
 import { Link } from "react-scroll";
 
-function NavTop({ switchTheme }) {
-const [star, setStar] = useState('reveal');
+function NavTop({ isDark, setDark }) {
+  const [star, setStar] = useState("reveal");
 
   return (
-    <div className="navtop">
+    <div className={`${isDark ? "navtopdark" : "navtop"}`}>
       <div className="navtop__wrap">
         <div className="navtopname__wrap">
           <NavTopTitle name={"Darryl"} />
@@ -35,7 +35,11 @@ const [star, setStar] = useState('reveal');
           </div>
           <div className="moon__sun">
             <div className="moon"></div>
-            <div className="sun" onClick={switchTheme}></div>
+            <div
+              className="sun"
+              onClick={() => {
+                setDark(!isDark);
+              }}></div>
           </div>
         </div>
       </div>

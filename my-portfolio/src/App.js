@@ -1,6 +1,4 @@
 import "./App.scss";
-import {useState} from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
@@ -11,36 +9,24 @@ import NavTop from "./pages/NavTop";
 import SkillsPage from "./pages/SkillsPage";
 import BackgroundPage from "./pages/BackgroundPage";
 import Footer from "./pages/Footer";
-
-const GlobalStyle = createGlobalStyle`
-body{
-  background-color: ${(props) =>
-    props.theme.mode === "dark" ? "#090a11" : "#FFF"}
-}`;
+import { useState } from "react";
 
 function App() {
-  const [theme, setTheme] = useState({ mode: "light" })
-
-  const handleThemeSwitch = () => {
-    setTheme(theme.mode === 'dark' ? { mode: "light" } : { mode: "dark" })
-  }
+  const [isDark, setDark] = useState(false);
 
   return (
-    <ThemeProvider theme={theme}>
-      <>
-      <GlobalStyle/>
-        <BackgroundPage />
-        <NavTop switchTheme = {handleThemeSwitch}/>
-        <NavBottom />
-        <HomePage />
-        <AboutPage />
-        <SkillsPage switchTheme = {handleThemeSwitch}/>
-        <PortfolioPage />
-        <BlogPage />
-        <ContactPage />
-        <Footer />
-      </>
-    </ThemeProvider>
+    <div>
+      <BackgroundPage isDark={isDark} />
+      <NavTop setDark={setDark} isDark={isDark} />
+      <NavBottom isDark={isDark}/>
+      <HomePage />
+      <AboutPage />
+      <SkillsPage isDark={isDark} />
+      <PortfolioPage />
+      <BlogPage />
+      <ContactPage />
+      <Footer />
+    </div>
   );
 }
 

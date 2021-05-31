@@ -1,8 +1,8 @@
 import React from 'react'
 
-function BackgroundPage() {
+function BackgroundPage({isDark}) {
     return (
-        <div className="background">
+        <div className={`${isDark ? "backgrounddark" : "backdround"}`}>
             <div className="bubbles">
                 <div className="bubble"></div>
                 <div className="bubble"></div>

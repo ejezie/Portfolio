@@ -66,7 +66,95 @@
             0 0 5px rgb(252, 252, 5);
           animation: animateboth 45s linear infinite;
         }
-        .reveal{
+        .reveal {
+          z-index: 1;
+        }
+      }
+    }
+  }
+  @media (max-width: 730px) {
+    a {
+      display: none;
+    }
+  }
+  @keyframes animateboth {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -700px 0;
+    }
+  }
+}
+
+.navtopdark {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  z-index: 10;
+  background-color: rgb(9, 10, 17, 0.6);
+  .navtop__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navtopname__wrap {
+      display: flex;
+      align-items: center;
+      i {
+        margin-left: 3px;
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: space-between;
+      .navtop__sub {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        a {
+          text-decoration: none;
+          color: #29335f;
+          &:hover {
+            color: #3f4e91;
+          }
+        }
+        a:not(:last-child) {
+          margin-right: 33px;
+        }
+      }
+      .moon__sun {
+        display: flex;
+        margin-left: 20px;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        .moon {
+          height: 2rem;
+          width: 2rem;
+          background-color: black;
+          border-radius: 50%;
+          position: absolute;
+          background: url(../images/m1.jpg);
+          background-size: cover;
+          border-radius: 50%;
+          box-shadow: inset 0 0 1px rgb(0, 0, 0, 0.1),
+            0 0 20px rgb(252, 252, 250);
+          animation: animateboth 45s linear infinite;
+        }
+        .sun {
+          height: 2rem;
+          width: 2rem;
+          background-color: yellow;
+          border-radius: 50%;
+          position: relative;
+          background: url(../images/sun3.png);
+          background-size: cover;
+          border-radius: 50%;
+          box-shadow: inset 0px 0px 0.5px rgb(0, 0, 0, 0.1),
+            0 0 5px rgb(252, 252, 5);
+          animation: animateboth 45s linear infinite;
+        }
+        .reveal {
           z-index: 1;
         }
       }

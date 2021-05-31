@@ -97,3 +97,104 @@
     }
   }
 }
+
+
+.navbottomdark {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  font-size: 1rem;
+  .bottom__navwrap {
+    display: none;
+    background-color: rgb(9, 10, 17, 0.6);
+    .nav__name,
+    .nav__toggle {
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      color: #29335f;
+    }
+    .nav__name:hover {
+      color: #715df2;
+    }
+    .nav__toggle {
+      transition: transform 0.3s linear;
+      &:hover {
+        color: #715df2;
+        transform: scale(1.1);
+      }
+    }
+    .shownavmenu {
+      bottom: 0;
+    }
+    .nav__menu {
+      display: flex;
+      justify-content: center;
+      height: 240px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      z-index: 2;
+      background-color: white;
+      .nav__gridlist {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        border-radius: 6px;
+      }
+    }
+    .nav__close {
+      font-size: 1.2rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 30px;
+    }
+    .nav__item {
+      // margin-bottom: 0px;
+    }
+
+    .nav__link {
+      color: #29335f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.3s ease-in;
+      &:hover {
+        color: #715df2;
+        transform: scale(1.1);
+      }
+      i {
+        margin-right: 2px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  @media screen and (max-width: 730px) {
+    .bottom__navwrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 968px;
+      height: 3rem;
+      padding: 30px;
+    }
+    .nav__menu {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      padding: 2rem 1.5rem 4rem;
+      box-shadow: 0 -3px 4px rgb(0, 0, 0, 0.15);
+      border-radius: 1.2rem 1.2rem 0 0;
+      transition: 0.5s ease-in-out;
+    }
+    .nav__gridlist {
+      box-shadow: 1px 1px 0.5px rgb(0, 0, 0, 0.15);
+      padding: 6px;
+    }
+  }
+}

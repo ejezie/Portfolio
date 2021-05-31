@@ -1,3 +1,5 @@
+$base-color: #3f4e91;
+$hover-color: #4f5fa8;
 .homepage {
   display: flex;
   align-items: center;
@@ -5,7 +7,6 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  color: #29335f;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -34,7 +35,7 @@
           }
         }
         .contact__home {
-          background-color: #29335f;
+          background-color: $base-color;
           color: white;
           padding: 10px;
           border-radius: 15px;
@@ -45,7 +46,7 @@
             font-size: 1rem;
           }
           &:hover {
-            background-color: #3f4e91;
+            background-color: $base-color;
           }
         }
         .send {
@@ -63,7 +64,7 @@
         }
         a {
           text-decoration: none;
-          color: #29335f;
+          color: $base-color;
           margin-bottom: 20px;
         }
         .scroll {

@@ -94,6 +94,73 @@
       }
     }
   }
+  .slide__wrapperdark {
+    height: 120px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+    
+    @media (max-width: 575px) {
+      // margin-top: -50px;
+      border-bottom: solid 1px rgb(41, 51, 95, 0.08);
+    }
+    &::before {
+      background: linear-gradient(
+        to left,
+        transparent,
+        #090a11,
+        #090a11
+      );
+      content: "";
+      height: 200px;
+      position: absolute;
+      width: 35%;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      @media (max-width: 400px) {
+        width: 20%;
+      }
+    }
+    &::after {
+      background: linear-gradient(
+        to right,
+        transparent,
+        #090a11,
+        #090a11
+      );
+      content: "";
+      height: 200px;
+      position: absolute;
+      width: 35%;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      @media (max-width: 400px) {
+        width: 20%;
+      }
+    }
+
+    .slide__track {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      margin-left: 1600px;
+      animation: slide_scroll 20s linear infinite;
+      place-items: center;
+      .slide__languages {
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+      }
+    }
+  }
   @keyframes slide_scroll {
     0% {
       transform: translateX(0);
