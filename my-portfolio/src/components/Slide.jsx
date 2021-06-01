@@ -12,12 +12,6 @@ import redux_icon from "../images/redux.png";
 import vs_icon from "../images/vs.png";
 import css_icon from "../images/css.png";
 import html_icon from "../images/html.png";
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-  .slide{
-    background-color: black;
-  }`;
 
 function Slide({ isDark }) {
   return (

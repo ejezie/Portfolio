@@ -1,50 +1,49 @@
-import React,{useEffect} from "react";
-import CanvasText from "../components/CanvasText";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import me from "../images/me.png";
 
 function HomePage() {
   useEffect(() => {
-    ////Automatically add classes for animations//////
-    let SlideUpElements = document.querySelectorAll(".slide-up");
-    let SlideLeftElements = document.querySelectorAll(".slide-left");
-    let OpacityRevealElements = document.querySelectorAll(".reveal");
+    const selectAppear = document.querySelectorAll(".appear");
+    const selectLeft = document.querySelectorAll(".shift__left");
+    const selectRight = document.querySelectorAll(".shift__right");
 
-    const options = {
-      rootMargin: "0px",
-    };
-
-    let Observer = new IntersectionObserver((entries) => {
+    let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
-          if (entry.target.dataset.delay && window.innerWidth > 960) {
-            ///// I dont want the delay on mobile
-            entry.target.style.animationDelay = entry.target.dataset.delay;
+          console.log(entry);
+          if(entry.target.className === "homepage appear"){
+            entry.target.style.animation = `anim1 1s forwards ease-in-out`;
           }
-          entry.target.classList.add("appear");
+          if(entry.target.className === "home__text shift__left"){
+            entry.target.style.animation = `anim2 1s forwards ease-in-out`;
+          }
+          if(entry.target.className === "home__image shift__right"){
+            entry.target.style.animation = `anim3 1s forwards ease-in-out`;
+          }
+          
+        } else {
+          entry.target.style.animation = `none`;
         }
       });
-    }, options);
-
-    OpacityRevealElements.forEach((element) => {
-      Observer.observe(element);
     });
 
-    SlideUpElements.forEach((element) => {
-      Observer.observe(element);
+    selectAppear.forEach((selectedAppear) => {
+      observer.observe(selectedAppear);
     });
-
-    SlideLeftElements.forEach((element) => {
-      Observer.observe(element);
+    selectLeft.forEach((selectedLeft) => {
+      observer.observe(selectedLeft);
+    });
+    selectRight.forEach((selectedRight) => {
+      observer.observe(selectedRight);
     });
   });
- 
 
   return (
-    <div className="homepage" id="home">
+    <div className="homepage appear" id="home">
       <div className="home__wrap">
         <div className="home__content">
-          <div className="home__text reveal">
+          <div className="home__text shift__left">
             <h2>Hi, I AM DARRYL </h2>
             <p className="describe__p">
               An enthusiatic frontend developer with a good eye for simple
@@ -63,7 +62,7 @@ function HomePage() {
               <i class="fas fa-long-arrow-alt-down arrow"></i>
             </Link>
           </div>
-          <div className="home__image reveal">
+          <div className="home__image shift__right">
             <img src={me} className="image__border" alt="Ejezie" />
           </div>
         </div>

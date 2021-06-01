@@ -48,6 +48,7 @@
           position: absolute;
           background: url(../images/m1.jpg);
           background-size: cover;
+          transition: all 1s;
           border-radius: 50%;
           box-shadow: inset 0 0 1px rgb(0, 0, 0, 0.1),
             0 0 20px rgb(252, 252, 250);
@@ -62,6 +63,7 @@
           background: url(../images/sun3.png);
           background-size: cover;
           border-radius: 50%;
+          transition: all 1s;
           box-shadow: inset 0px 0px 0.5px rgb(0, 0, 0, 0.1),
             0 0 5px rgb(252, 252, 5);
           animation: animateboth 45s linear infinite;
@@ -137,6 +139,7 @@
           background: url(../images/m1.jpg);
           background-size: cover;
           border-radius: 50%;
+          transition: all 1s;
           box-shadow: inset 0 0 1px rgb(0, 0, 0, 0.1),
             0 0 20px rgb(252, 252, 250);
           animation: animateboth 45s linear infinite;
@@ -149,6 +152,7 @@
           position: relative;
           background: url(../images/sun3.png);
           background-size: cover;
+          transition: all 1s;
           border-radius: 50%;
           box-shadow: inset 0px 0px 0.5px rgb(0, 0, 0, 0.1),
             0 0 0px rgb(252, 252, 5);

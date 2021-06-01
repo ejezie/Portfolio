@@ -32,9 +32,27 @@ body {
   color: $base-color;
   overflow-x: hidden;
 }
-span {
-  // color: #29335f;
-  // hover: #3f4e91
+@keyframes anim1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-// background-color: #180f2e;
-// color: #29335f
+@keyframes anim2 {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes anim3 {
+  0% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

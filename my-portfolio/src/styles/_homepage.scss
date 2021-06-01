@@ -7,12 +7,7 @@ $hover-color: #4f5fa8;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  .reveal {
-    &.appear {
-      transition: all 1s ease-out;
-      animation: reveal 1s ease forwards;
-    }
-  }
+  opacity: 0;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -31,7 +26,6 @@ $hover-color: #4f5fa8;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        opacity: 0;
         h2 {
           font-size: 3.5rem;
           @media (max-width: 1100px) {
@@ -100,7 +94,6 @@ $hover-color: #4f5fa8;
       .home__image {
         margin-bottom: 20px;
         position: relative;
-        opacity: 0;
         @media (max-width: 1000px) {
           margin-right: 50px;
         }
@@ -179,14 +172,6 @@ $hover-color: #4f5fa8;
     }
   }
  
-  @keyframes reveal {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   @keyframes arow {
     0% {
       transform: translateY(4px);

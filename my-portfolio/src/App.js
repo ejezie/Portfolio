@@ -10,6 +10,7 @@ import SkillsPage from "./pages/SkillsPage";
 import BackgroundPage from "./pages/BackgroundPage";
 import Footer from "./pages/Footer";
 import { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 function App() {
   const [isDark, setDark] = useState(false);
@@ -18,8 +19,10 @@ function App() {
     <div>
       <BackgroundPage isDark={isDark} />
       <NavTop setDark={setDark} isDark={isDark} />
-      <NavBottom isDark={isDark}/>
-      <HomePage />
+      <NavBottom isDark={isDark} />
+      <CSSTransition in={true} timeout={1000} classNames="homepage">
+        <HomePage />
+      </CSSTransition>
       <AboutPage />
       <SkillsPage isDark={isDark} />
       <PortfolioPage />

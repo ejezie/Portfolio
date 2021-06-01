@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Thumbs } from "swiper";
 import "swiper/swiper-bundle.css";
@@ -13,7 +13,25 @@ import movies from "../images/movies.png";
 SwiperCore.use([Navigation, Pagination, Thumbs]);
 
 function PortfolioPage() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  useEffect(() => {
+    const selectAppear = document.querySelectorAll(".appear");
+
+    let observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          console.log(entry);
+          if(entry.target.className === "portfolio appear"){
+            entry.target.style.animation = `anim1 1s forwards ease-in-out`;
+          }
+         
+        }
+      });
+    });
+
+    selectAppear.forEach((selectedAppear) => {
+      observer.observe(selectedAppear);
+    });
+  });
 
   const items = [
     {
@@ -70,17 +88,9 @@ function PortfolioPage() {
       </div>
     </SwiperSlide>
   ));
-  const thumbs = items.map((item) => (
-    <SwiperSlide
-      id={`${item.name}-thumb`}
-      tag="li"
-      style={{ listStyle: "none" }}>
-      <img src={item.name} alt="" className="thumb__image" />
-    </SwiperSlide>
-  ));
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="portfolio appear" id="portfolio">
       <div className="portfolio__heading">
         <Title title={"PORTFOLIO"} span={"PORTFOLIO"} />
       </div>
@@ -90,18 +100,9 @@ function PortfolioPage() {
         wrapperTag="ul"
         navigation
         pagination
-        thumbs={{ swiper: thumbsSwiper }}
         slidesPerView={1}>
         {slides}
       </Swiper>
-      {/* <Swiper
-        id="thumbs"
-        className = "thumbnail"
-        onSwiper={setThumbsSwiper}
-        spaceBetween={0}
-        slidesPerView={6}>
-        {thumbs}
-      </Swiper> */}
     </div>
   );
 }
