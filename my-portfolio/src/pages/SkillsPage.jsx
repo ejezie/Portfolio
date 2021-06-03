@@ -5,36 +5,35 @@ import Slide from "../components/Slide";
 function SkillsPage({ isDark }) {
   useEffect(() => {
     const selectAppear = document.querySelectorAll(".appear");
-    const selectLeft = document.querySelectorAll(".shift__left");
+    const selectUp = document.querySelectorAll(".shift__up");
     const selectRight = document.querySelectorAll(".shift__right");
+    const selectLeft = document.querySelectorAll(".shift__left");
+
+    let options = {
+      threshold: 0.5,
+    };
 
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
-          console.log(entry);
-          if (entry.target.className === "skills appear") {
-            entry.target.style.animation = `anim1 1s forwards ease-in-out`;
-          }
-          if (entry.target.className === "skills__list shift__left") {
-            entry.target.style.animation = `anim2 1s forwards ease-in-out`;
-          }
-          if (entry.target.className === "skills__content shift__right") {
-            entry.target.style.animation = `anim3 1s forwards ease-in-out`;
-          }
-        } else {
-          entry.target.style.animation = `none`;
+          entry.target.style = `transition: all 1s ease-in-out;`;
         }
+        entry.target.classList.add("show");
+        entry.target.style.animationDelay = entry.target.dataset.delay;
       });
-    });
+    }, options);
 
     selectAppear.forEach((selectedAppear) => {
       observer.observe(selectedAppear);
     });
-    selectLeft.forEach((selectedLeft) => {
-      observer.observe(selectedLeft);
+    selectUp.forEach((selectedUp) => {
+      observer.observe(selectedUp);
     });
-    selectRight.forEach((selectedRight) => {
-      observer.observe(selectedRight);
+    selectLeft.forEach((selectedUp) => {
+      observer.observe(selectedUp);
+    });
+    selectRight.forEach((selectedUp) => {
+      observer.observe(selectedUp);
     });
   });
 
@@ -45,8 +44,8 @@ function SkillsPage({ isDark }) {
           <Title title={"MY SKILLS"} span={"MY SKILLS"} />
         </div>
         <div className="skills__container">
-          <div className="skills__content">
-            <div className="skills__header">
+          <div className="skills__content appear shift__up" data-delay="1s">
+            <div className="skills__header appear shift__left" data-delay="2s">
               <i class="fas fa-code skills__icon"></i>
               <h2>Frontend Dev Tools</h2>
             </div>
@@ -98,8 +97,8 @@ function SkillsPage({ isDark }) {
             </div>
           </div>
 
-          <div className="skills__content shift__right">
-            <div className="skills__header">
+          <div className="skills__content appear shift__up" data-delay="1s">
+            <div className="skills__header appear shift__left" data-delay="2s">
               <i class="fas fa-server skills__icon icon__two"></i>
               <h2>Backend Dev Tools</h2>
             </div>

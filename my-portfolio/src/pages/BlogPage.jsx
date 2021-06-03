@@ -6,6 +6,10 @@ function Blog() {
   useEffect(() => {
     const selectAppear = document.querySelectorAll(".appear");
 
+    let options = {
+      threshold: 0.5,
+    };
+
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
@@ -25,12 +29,12 @@ function Blog() {
   });
 
   return (
-    <div className="blog appear" id="blog">
+    <div className="blog" id="blog">
       <div className="blog__heading">
         <Title title={"blogpage"} span={"blogpage"} />
       </div>
       <div className="blog__wrapper">
-        <div className="blog__content">
+        <div className="blog__content appear shift__up" data-delay="2.2s">
           <p>Coming Soon</p>
           <span></span>
           <span></span>

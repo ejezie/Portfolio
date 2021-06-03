@@ -16,17 +16,19 @@ function PortfolioPage() {
   useEffect(() => {
     const selectAppear = document.querySelectorAll(".appear");
 
+    let options = {
+      threshold: 0.5,
+    };
+
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
-          console.log(entry);
-          if(entry.target.className === "portfolio appear"){
-            entry.target.style.animation = `anim1 1s forwards ease-in-out`;
-          }
-         
+          entry.target.style = `transition: all 1s ease-in-out;`;
         }
+        entry.target.classList.add("show");
+        entry.target.style.animationDelay = entry.target.dataset.delay;
       });
-    });
+    }, options);
 
     selectAppear.forEach((selectedAppear) => {
       observer.observe(selectedAppear);
@@ -90,7 +92,7 @@ function PortfolioPage() {
   ));
 
   return (
-    <div className="portfolio appear" id="portfolio">
+    <div className="portfolio" id="portfolio">
       <div className="portfolio__heading">
         <Title title={"PORTFOLIO"} span={"PORTFOLIO"} />
       </div>
@@ -100,7 +102,8 @@ function PortfolioPage() {
         wrapperTag="ul"
         navigation
         pagination
-        slidesPerView={1}>
+        slidesPerView={1}
+        className="appear shift__up" data-delay ="2.2s">
         {slides}
       </Swiper>
     </div>

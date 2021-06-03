@@ -4,23 +4,38 @@ import Title from "../components/Title";
 function Contact() {
   useEffect(() => {
     const selectAppear = document.querySelectorAll(".appear");
+    const selectUp = document.querySelectorAll(".shift__up");
+    const selectRight = document.querySelectorAll(".shift__right");
+    const selectLeft = document.querySelectorAll(".shift__left");
+
+    let options = {
+      threshold: 0.5,
+    };
 
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
-          console.log(entry);
-          if(entry.target.className === "contact appear"){
-            entry.target.style.animation = `anim1 1s forwards ease-in-out`;
-          }
-         
+          entry.target.style = `transition: all 1s ease-in-out;`;
         }
+        entry.target.classList.add("show");
+        entry.target.style.animationDelay = entry.target.dataset.delay;
       });
-    });
+    }, options);
 
     selectAppear.forEach((selectedAppear) => {
       observer.observe(selectedAppear);
     });
+    selectUp.forEach((selectedUp) => {
+      observer.observe(selectedUp);
+    });
+    selectLeft.forEach((selectedUp) => {
+      observer.observe(selectedUp);
+    });
+    selectRight.forEach((selectedUp) => {
+      observer.observe(selectedUp);
+    });
   });
+
 
 
   return (
@@ -30,7 +45,7 @@ function Contact() {
       </div>
       <div className="wrapper">
         <div className="contact__wrapper">
-          <div className="contact__icons">
+          <div className="contact__icons appear shift__up" data-delay="0.5s">
             <div className="icon__call icon">
               <i class="far fa-phone-alt"></i>
               <div className="call__text">
@@ -53,7 +68,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          <form className="contact__form" action="">
+          <form className="contact__form appear shift__up" data-delay="1s"action="">
             <div className="name__email">
               <div className="contact__content"  id="contact__content1">
                 <label htmlFor="">Name</label>
@@ -77,7 +92,7 @@ function Contact() {
                 cols="30"
                 rows="7"></textarea>
             </div>
-              <a href="#" className="contact__button">
+              <a href="#" className="contact__button appear shift__up" data-delay="1.5s">
                 Send Message <i class="fal fa-paper-plane send"></i>
               </a>
           </form>

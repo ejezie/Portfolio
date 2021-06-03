@@ -2,55 +2,55 @@ import React, { useEffect } from "react";
 import Title from "../components/Title";
 import laptop from "../images/lap.png";
 import screen from "../images/code.gif";
+import resume from "../assets/resume.pdf"
 
 function About() {
   useEffect(() => {
     const selectAppear = document.querySelectorAll(".appear");
-    const selectLeft = document.querySelectorAll(".shift__left");
+    const selectUp = document.querySelectorAll(".shift__up");
     const selectRight = document.querySelectorAll(".shift__right");
+    const selectLeft = document.querySelectorAll(".shift__left");
+
+    let options = {
+      threshold: 0.5,
+    };
 
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
-          console.log(entry);
-          if (entry.target.className === "about appear") {
-            entry.target.style.animation = `anim1 1s forwards ease-in-out`;
-          }
-          if (entry.target.className === "about__images shift__left") {
-            entry.target.style.animation = `anim2 1s forwards ease-in-out`;
-          }
-          if (entry.target.className === "description__wrapper shift__right") {
-            entry.target.style.animation = `anim3 1s forwards ease-in-out`;
-          }
-        } else {
-          entry.target.style.animation = `none`;
+          entry.target.style = `transition: all 1s ease-in-out;`;
         }
+        entry.target.classList.add("show");
+        entry.target.style.animationDelay = entry.target.dataset.delay;
       });
-    });
+    }, options);
 
     selectAppear.forEach((selectedAppear) => {
       observer.observe(selectedAppear);
     });
-    selectLeft.forEach((selectedLeft) => {
-      observer.observe(selectedLeft);
+    selectUp.forEach((selectedUp) => {
+      observer.observe(selectedUp);
     });
-    selectRight.forEach((selectedRight) => {
-      observer.observe(selectedRight);
+    selectLeft.forEach((selectedUp) => {
+      observer.observe(selectedUp);
+    });
+    selectRight.forEach((selectedUp) => {
+      observer.observe(selectedUp);
     });
   });
 
   return (
-    <div className="about appear" id="about">
+    <div className="about" id="about">
       <div className="about__wrap">
-        <div className="about__title">
+        <div className="about__title appear">
           <Title title={"About Me"} span={"About me"} />
         </div>
         <div className="about__content">
-          <div className="about__images shift__left">
+          <div className="about__images appear shift__up" data-delay = "0.5s">
             <img src={laptop} alt="laptop" className="image__laptop" />
             <img src={screen} alt="screen" className="screen__content" />
           </div>
-          <div className="description__wrapper shift__right">
+          <div className="description__wrapper appear shift__up" data-delay = "1s">
             <h3>MY INTRODUCTION</h3>
             <p className="description">
               I am a web developer with knowledge and experience in making
@@ -62,14 +62,14 @@ function About() {
               isn't just work for me, its fun and its a part of my life that i
               continue to enjoy.
             </p>
-            <div className="about__download">
-              <a className="download__link" download href="assets/resume.pdf">
+            <div className="about__download appear shift__up" data-delay = "1.5s">
+              <a className="download__link" download href={resume}>
                 Resume <i class="far fa-cloud-download-alt"></i>
               </a>
             </div>
           </div>
         </div>
-        <div className="social__link">
+        <div className="social__link appear shift__up" data-delay = "2s">
           <a href="#">
             <i class="fab fa-github"></i>
           </a>

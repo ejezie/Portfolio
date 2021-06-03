@@ -1,7 +1,6 @@
 .skills {
   width: 100vw;
   margin-top: 100px;
-  // opacity: 0;
   .skills__wrapper {
     .skills__heading {
       margin: 0px 0px 100px 40%;
@@ -126,6 +125,30 @@
         width: 60%;
         animation: skills_move10 4.8s ease-in-out;
       }
+    }
+  }
+  .appear {
+    opacity: 0;
+    &.show {
+      animation: appear 1s ease forwards;
+    }
+  }
+  .shift__up {
+    transform: translateY(65px);
+    &.show {
+      animation: up 1s forwards ease-in-out;
+    }
+  }
+  .shift__left{
+    transform: translateX(-25px);
+    &.show{
+      animation: left 1s forwards ease-in-out;
+    }
+  }
+  .shift__right{
+    transform: translateX(25px);
+    &.show{
+      animation: right 1s forwards ease-in-out;
     }
   }
   @keyframes skills_move1 {
