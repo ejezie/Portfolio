@@ -1,5 +1,4 @@
 import React from "react";
-import Title from "../components/Title";
 import { Link } from "react-scroll";
 
 function Footer() {
@@ -23,13 +22,13 @@ function Footer() {
             </Link>
           </div>
           <div className="footer__social">
-            <a href="#">
+            <a href="https://github.com/ejezie">
               <i class="fab fa-github"></i>
             </a>
-            <a href="#">
+            <a href="https://github.com/ejezie">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="#">
+            <a href="https://github.com/ejezie">
               <i class="fab fa-twitter-square"></i>
             </a>
           </div>

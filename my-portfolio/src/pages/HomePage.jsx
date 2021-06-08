@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-scroll";
 import me from "../images/me.png";
 import Title from "../components/Title";
@@ -15,7 +15,6 @@ import house from "../images/house.png";
 import port from "../images/port.png";
 import dora from "../images/dora.png";
 import movies from "../images/movies.png";
-
 
 SwiperCore.use([Navigation, Pagination, Thumbs]);
 
@@ -86,13 +85,13 @@ function HomePage({ isDark }) {
 
     const options = {
       threshold: 0.2,
-      rootMargin : "-200px",
+      rootMargin: "-200px",
     };
 
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry)
+          console.log(entry);
           entry.target.classList.add("show");
           entry.target.style.animationDelay = entry.target.dataset.delay;
         }
@@ -111,7 +110,7 @@ function HomePage({ isDark }) {
     selectRight.forEach((selectedUp) => {
       observer.observe(selectedUp);
     });
-    return ()=>{
+    return () => {
       selectAppear.forEach((selectedAppear) => {
         observer.unobserve(selectedAppear);
       });
@@ -124,7 +123,7 @@ function HomePage({ isDark }) {
       selectRight.forEach((selectedUp) => {
         observer.unobserve(selectedUp);
       });
-    }
+    };
   });
 
   return (
@@ -144,7 +143,12 @@ function HomePage({ isDark }) {
               className="contact__home">
               Contact me<i class="fal fa-paper-plane sendt"></i>
             </Link>
-            <Link to="about" smooth={true} duration={1000} className="scroll appear shift__up" data-delay="1.5s">
+            <Link
+              to="about"
+              smooth={true}
+              duration={1000}
+              className="scroll appear shift__up"
+              data-delay="1.5s">
               <i class="fas fa-mouse mouse"></i>
               <p className="scroll__p">scroll</p>
               <i class="fas fa-long-arrow-alt-down arrow"></i>
@@ -190,16 +194,16 @@ function HomePage({ isDark }) {
             </div>
           </div>
           <div className="social__link appear shift__up" data-delay="2s">
-            <a href="#">
+            <a href="https://github.com/ejezie">
               <i class="fab fa-github"></i>
             </a>
-            <a href="#">
+            <a href="https://github.com/ejezie">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="#">
+            <a href="https://github.com/ejezie">
               <i class="fab fa-twitter-square"></i>
             </a>
-            <a href="#">
+            <a href="https://github.com/ejezie">
               <i class="fab fa-facebook-square"></i>
             </a>
           </div>
@@ -416,7 +420,7 @@ function HomePage({ isDark }) {
                   rows="7"></textarea>
               </div>
               <a
-                href="#"
+                href="https://gmail.com"
                 className="contact__button appear shift__up"
                 data-delay="1.5s">
                 Send Message <i class="fal fa-paper-plane send"></i>
