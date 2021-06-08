@@ -146,6 +146,7 @@
       border-bottom: solid 1px rgb(41, 51, 95, 0.08);
     }
     &::before {
+      transition: all 1s;
       background: linear-gradient(to left, transparent, #090a11, #090a11);
       content: "";
       height: 200px;
@@ -159,6 +160,7 @@
       }
     }
     &::after {
+      transition: all 1s;
       background: linear-gradient(to right, transparent, #090a11, #090a11);
       content: "";
       height: 200px;

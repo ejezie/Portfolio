@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import NavTopTitle from "../components/NavTopTitle";
 import { Link } from "react-scroll";
 
 function NavTop({ isDark, setDark }) {
-  const [star, setStar] = useState("showstar");
 
   return (
     <div className={`${isDark ? "navtopdark" : "navtop"}`}>
@@ -23,11 +22,11 @@ function NavTop({ isDark, setDark }) {
             <Link smooth={true} to="/skills">
               <NavTopTitle name={"Skills"} id={"skills"} />
             </Link>
-            <Link smooth={true} to="/blog">
-              <NavTopTitle name={"Blog"} id={"blog"} />
-            </Link>
             <Link smooth={true} to="/portfolio">
               <NavTopTitle name={"Portfolio"} id={"portfolio"} />
+            </Link>
+            <Link smooth={true} to="/blog">
+              <NavTopTitle name={"Blog"} id={"blog"} />
             </Link>
             <Link smooth={true} to="/contact">
               <NavTopTitle name={"Contact"} id={"contact"} />

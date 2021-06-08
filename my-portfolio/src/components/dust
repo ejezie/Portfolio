@@ -167,3 +167,46 @@ function PortfolioPage() {
 }
 
 export default PortfolioPage;
+// function useOnScreen(options) {
+//   const text = React.useRef();
+//   const image = React.useRef();
+//   const scroll = React.useRef();
+//   const [visible, setVisible] = React.useState(false);
+
+//   React.useEffect(() => {
+//     let observer = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         var entry = entry;
+//         setVisible(entry.isIntersecting);
+
+//        text.current.classList.add('move');
+//        text.current.classList.remove('move');
+//        if(text.current.classList.contains('move'))
+//         text.current.classList.toggle('move');
+//       });
+//     }, options);
+//     if (text.current) {
+//       observer.observe(text.current);
+//     }
+//     if (image.current) {
+//       observer.observe(text.current);
+//     }
+//     if (scroll.current) {
+//       observer.observe(text.current);
+//     }
+//     return () => {
+//       if (text.current) {
+//         observer.unobserve(text.current);
+//       }
+//       if (image.current) {
+//         observer.unobserve(text.current);
+//       }
+//       if (scroll.current) {
+//         observer.unobserve(text.current);
+//       }
+//     };
+//   }, [text, scroll, image, options]);
+//   return [text, image, scroll, visible];
+// }
+
+

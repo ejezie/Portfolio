@@ -125,5 +125,44 @@
         animation: right 1s forwards ease-in-out;
       }
     }
+    @keyframes appear {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes left {
+      0% {
+        opacity: 0;
+        transform: translateX(-25px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    @keyframes right {
+      0% {
+        opacity: 0;
+        transform: translateX(25px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    @keyframes up {
+      0% {
+        opacity: 0;
+        transform: translateY(65px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    
   }
 }

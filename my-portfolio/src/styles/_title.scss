@@ -8,8 +8,7 @@
   @media (max-width: 1000px) {
     font-size: 2rem;
   }
-
-  &::before {
+  &::before, .move {
     content: "";
     bottom: 0;
     left: 0;
@@ -20,7 +19,8 @@
     border-radius: 10px;
     opacity: 0.8;
     overflow: hidden;
-    animation: move 2s 1s ease-in;
+    animation: move 2s ease-in-out;
+  
   }
   &::after {
     content: "";
@@ -32,8 +32,9 @@
     background-color: rgb(21, 34, 73);
     border-radius: 10px 0px 10px 10px;
     opacity: 0.8;
-    animation: move 2s 1s ease-in;
+    animation: move 2s ease-in;
   }
+  
   span {
     position: absolute;
     top: 70%;
@@ -45,37 +46,16 @@
       font-size: 3.5rem;
     }
   }
-  .appear {
-    opacity: 0;
-    &.show {
-      animation: appear 1s ease forwards;
-    }
-  }
-  .shift__up {
-    transform: translateY(65px);
-    &.show {
-      animation: up 1s forwards ease-in-out;
-    }
-  }
-  .move{
-    animation: move 2s 1s ease-in;
-  }
-  .shift__right{
-    transform: translateX(25px);
-    &.show{
-      animation: right 1s forwards ease-in-out;
-    }
-  }
+}
 
-  @keyframes move {
-    0% {
-      width: 1rem;
-    }
-    40% {
-      width: 16rem;
-    }
-    100% {
-      opacity: 1;
-    }
+@keyframes move {
+  0% {
+    width: 1rem;
+  }
+  40% {
+    width: 16rem;
+  }
+  100% {
+    opacity: 1;
   }
 }

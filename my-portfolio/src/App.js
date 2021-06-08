@@ -20,14 +20,7 @@ function App() {
       <BackgroundPage isDark={isDark} />
       <NavTop setDark={setDark} isDark={isDark} />
       <NavBottom isDark={isDark} />
-      <CSSTransition in={true} timeout={1000} classNames="homepage">
-        <HomePage />
-      </CSSTransition>
-      <AboutPage />
-      <SkillsPage isDark={isDark} />
-      <PortfolioPage />
-      <BlogPage />
-      <ContactPage />
+      <HomePage isDark={isDark} />
       <Footer />
     </div>
   );
