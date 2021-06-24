@@ -74,7 +74,7 @@ function HomePage({ isDark }) {
         </div>
       </div>
       <div className="text__portion">
-        <h2 className="text__portion__header">item.title</h2>
+        <h2 className="text__portion__header">{item.title}</h2>
         <p>{item.text}</p>
         <div className="slide__button">
           <a href={item.view}>See Demo</a>
