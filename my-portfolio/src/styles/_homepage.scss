@@ -23,9 +23,9 @@ $hover-color: #4f5fa8;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      &.move {
-        animation: moveup 2s ease forwards;
-      }
+      transform: translateY(65px);
+      opacity: 0;
+      transition: all 1s 1s ease-in;
       h2 {
         font-size: 3.5rem;
         @media (max-width: 1100px) {
@@ -95,9 +95,11 @@ $hover-color: #4f5fa8;
       }
     }
     .home__image {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
       position: relative;
       transition: all 1s ease-in;
+      transform: translateY(65px);
+      opacity: 0;
       @media (max-width: 1000px) {
         margin-right: 50px;
       }
@@ -125,7 +127,6 @@ $hover-color: #4f5fa8;
           background-color: red;
           border-top: solid 5px red;
           border-radius: 50%;
-
           animation: rotateb 4s infinite;
           animation-timing-function: linear;
           opacity: 0;
@@ -173,40 +174,6 @@ $hover-color: #4f5fa8;
         }
       }
     }
-  }
-  .appear {
-    opacity: 0;
-    &.show {
-      animation: appear 1s ease forwards;
-    }
-  }
-  .shift__up {
-    transform: translateY(65px);
-    &.show {
-      animation: up 1s forwards ease-in-out;
-    }
-  }
-  .shift__left {
-    transform: translateX(-25px);
-    &.show {
-      animation: left 1s forwards ease-in-out;
-    }
-  }
-  .shift__right {
-    transform: translateX(25px);
-    &.show {
-      animation: right 1s forwards ease-in-out;
-    }
-  }
-}
-@keyframes moveup {
-  0% {
-    opacity: 0;
-    transform: translateY(65px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
   }
 }
 @keyframes arow {

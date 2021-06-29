@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import me from "../images/me.png";
 import Title from "../components/Title";
@@ -8,6 +8,8 @@ import resume from "../assets/resume.pdf";
 import Slide from "../components/Slide";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Thumbs } from "swiper";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import "swiper/swiper-bundle.css";
 import mewzik from "../images/mewzik.png";
 import webp from "../images/webp.png";
@@ -19,7 +21,9 @@ import movies from "../images/movies.png";
 SwiperCore.use([Navigation, Pagination, Thumbs]);
 
 function HomePage({ isDark }) {
-  // const [text, image, scroll, visible] = useOnScreen({ rootMargin: "-200px" });
+  useEffect(() => {
+    main();
+  });
 
   const items = [
     {
@@ -76,61 +80,42 @@ function HomePage({ isDark }) {
       </div>
     </SwiperSlide>
   ));
-
-  useEffect(() => {
-    const selectAppear = document.querySelectorAll(".appear");
-    const selectUp = document.querySelectorAll(".shift__up");
-    const selectRight = document.querySelectorAll(".shift__right");
-    const selectLeft = document.querySelectorAll(".shift__left");
-
-    const options = {
-      threshold: 0.2,
+  const [visible, setVisible] = useState(false);
+  // const [aboutAnim, setaboutAnim] = useState(false);
+  function main() {
+    const animsOne = document.querySelector(".animOne");
+    const aboutAnim = document.querySelector(".aboutAnim");
+    // const aboutAnim = document.querySelector(".aboutAnim");
+    let options = {
       rootMargin: "-200px",
     };
-
-    let observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log(entry);
-          entry.target.classList.add("show");
-          entry.target.style.animationDelay = entry.target.dataset.delay;
+        if (entry.intersectionRatio > 0) {
+          console.log(entry.target);
+          setVisible(entry.isIntersecting);
+          observer.unobserve(entry.target);
         }
       });
-    }, options);
+    });
+    // animsOne.forEach((animOne) => {
 
-    selectAppear.forEach((selectedAppear) => {
-      observer.observe(selectedAppear);
-    });
-    selectUp.forEach((selectedUp) => {
-      observer.observe(selectedUp);
-    });
-    selectLeft.forEach((selectedUp) => {
-      observer.observe(selectedUp);
-    });
-    selectRight.forEach((selectedUp) => {
-      observer.observe(selectedUp);
-    });
-    return () => {
-      selectAppear.forEach((selectedAppear) => {
-        observer.unobserve(selectedAppear);
-      });
-      selectUp.forEach((selectedUp) => {
-        observer.unobserve(selectedUp);
-      });
-      selectLeft.forEach((selectedUp) => {
-        observer.unobserve(selectedUp);
-      });
-      selectRight.forEach((selectedUp) => {
-        observer.unobserve(selectedUp);
-      });
-    };
-  });
+    // });
+    observer.observe(animsOne);
+    observer.observe(aboutAnim);
+  }
 
   return (
     <div>
       <div className="home__wrap" id="home">
-        <div className="home__content">
-          <div className="home__text appear shift__up" data-delay="1s">
+        <div className="home__content animOne">
+          <div
+            className="home__text"
+            // data-delay="1s"
+            style={{
+              transform: `${visible && "translateY(0px)"}`,
+              opacity: `${visible && "1"}`,
+            }}>
             <h2>Hi, I AM DARRYL </h2>
             <p className="describe__p">
               An enthusiatic frontend developer with a good eye for simple
@@ -154,24 +139,39 @@ function HomePage({ isDark }) {
               <i class="fas fa-long-arrow-alt-down arrow"></i>
             </Link>
           </div>
-          <div className="home__image appear shift__up" data-delay="0.5s">
+          <div
+            className="home__image"
+            // data-delay="0.5s"
+            style={{
+              transform: `${visible && "translateY(0px)"}`,
+              opacity: `${visible && "1"}`,
+            }}>
             <img src={me} className="image__border" alt="Ejezie" />
           </div>
         </div>
       </div>
       {/*  */}
-      <div className="about" id="about">
+      <div className="about aboutAnim" id="about">
         <div className="about__wrap">
           <div className="about__title appear">
             <Title title={"About Me"} span={"About me"} />
           </div>
           <div className="about__content">
-            <div className="about__images appear shift__up" data-delay="0.5s">
+            <div
+              className="about__images"
+              style={{
+                transform: `${visible && "translateY(0px)"}`,
+                opacity: `${visible && "1"}`,
+              }}>
               <img src={laptop} alt="laptop" className="image__laptop" />
               <img src={screen} alt="screen" className="screen__content" />
             </div>
             <div
-              className="description__wrapper appear shift__up"
+              className="description__wrapper"
+              style={{
+                transform: `${visible && "translateY(0px)"}`,
+                opacity: `${visible && "1"}`,
+              }}
               data-delay="1s">
               <h3>MY INTRODUCTION</h3>
               <p className="description">
@@ -184,16 +184,14 @@ function HomePage({ isDark }) {
                 isn't just work for me, its fun and its a part of my life that i
                 continue to enjoy.
               </p>
-              <div
-                className="about__download appear shift__up"
-                data-delay="1.5s">
+              <div className="about__download">
                 <a className="download__link" download href={resume}>
                   Resume <i class="far fa-cloud-download-alt"></i>
                 </a>
               </div>
             </div>
           </div>
-          <div className="social__link appear shift__up" data-delay="2s">
+          <div className="social__link">
             <a href="https://github.com/ejezie">
               <i class="fab fa-github"></i>
             </a>
@@ -210,20 +208,18 @@ function HomePage({ isDark }) {
         </div>
       </div>
       {/*  */}
-      <div className="skills appear" id="skills">
+      <div className="skills" id="skills">
         <div className="skills__wrapper">
-          <div className="skills__heading appear">
+          <div className="skills__heading">
             <Title title={"MY SKILLS"} span={"MY SKILLS"} />
           </div>
           <div className="skills__container">
-            <div className="skills__content appear shift__up" data-delay="1s">
-              <div
-                className="skills__header appear shift__left"
-                data-delay="2s">
+            <div className="skills__content">
+              <div className="skills__header">
                 <i class="fas fa-code skills__icon"></i>
                 <h2>Frontend Dev Tools</h2>
               </div>
-              <div className="skills__list shift__left">
+              <div className="skills__list">
                 <div className="skills__data">
                   <div className="skills__title">
                     <h3 className="skills__name">HTML</h3>
@@ -271,10 +267,8 @@ function HomePage({ isDark }) {
               </div>
             </div>
 
-            <div className="skills__content appear shift__up" data-delay="1s">
-              <div
-                className="skills__header appear shift__left"
-                data-delay="2s">
+            <div className="skills__content">
+              <div className="skills__header">
                 <i class="fas fa-server skills__icon icon__two"></i>
                 <h2>Backend Dev Tools</h2>
               </div>
@@ -340,19 +334,17 @@ function HomePage({ isDark }) {
           wrapperTag="ul"
           navigation
           pagination
-          slidesPerView={1}
-          className="appear shift__up"
-          data-delay="1.2s">
+          slidesPerView={1}>
           {slides}
         </Swiper>
       </div>
       {/*  */}
       <div className="blog" id="blog">
-        <div className="blog__heading appear">
+        <div className="blog__heading">
           <Title title={"blogpage"} span={"blogpage"} />
         </div>
         <div className="blog__wrapper">
-          <div className="blog__content appear shift__up" data-delay="1.2s">
+          <div className="blog__content">
             <p>Coming Soon</p>
             <span></span>
             <span></span>
@@ -364,12 +356,12 @@ function HomePage({ isDark }) {
       </div>
       {/*  */}
       <div className="contact appear" id="contact">
-        <div className="contact__title appear">
+        <div className="contact__title">
           <Title title={"Contact"} span={"Contact"} />
         </div>
         <div className="wrapper">
           <div className="contact__wrapper">
-            <div className="contact__icons appear shift__up" data-delay="0.5s">
+            <div className="contact__icons" data-delay="0.5s">
               <div className="icon__call icon">
                 <i class="far fa-phone-alt"></i>
                 <div className="call__text">
@@ -392,10 +384,7 @@ function HomePage({ isDark }) {
                 </div>
               </div>
             </div>
-            <form
-              className="contact__form appear shift__up"
-              data-delay="1s"
-              action="">
+            <form className="contact__form" action="">
               <div className="name__email">
                 <div className="contact__content" id="contact__content1">
                   <label htmlFor="">Name</label>
@@ -419,10 +408,7 @@ function HomePage({ isDark }) {
                   cols="30"
                   rows="7"></textarea>
               </div>
-              <a
-                href="https://gmail.com"
-                className="contact__button appear shift__up"
-                data-delay="1.5s">
+              <a href="https://gmail.com" className="contact__button">
                 Send Message <i class="fal fa-paper-plane send"></i>
               </a>
             </form>
