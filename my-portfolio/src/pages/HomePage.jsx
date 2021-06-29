@@ -28,31 +28,37 @@ function HomePage({ isDark }) {
   const items = [
     {
       name: mewzik,
+      title: "Mewzik",
       text: "Tools: HTML, CSS, React, Context API...",
       view: "https://mewzik.vercel.app/",
     },
     {
       name: movies,
+      title: "Moviezhub",
       text: " HTML, CSS, React and Axios...",
       view: "https://movies-hub.vercel.app/",
     },
     {
       name: house,
+      title: "Comfty House",
       text: " HTML, CSS and Javascript",
       view: "https://github.com/ejezie",
     },
     {
       name: port,
+      title: "Portfolio",
       text: " HTML, SCSS and React ",
       view: "https://github.com/ejezie",
     },
     {
       name: dora,
+      title: "Doragroovykicthen",
       text: " HTML, CSS and Javascript",
       view: "https://github.com/ejezie",
     },
     {
       name: webp,
+      title: "Tour",
       text: " HTML, CSS and Javascript",
       view: "https://ejezie.github.io/web-project2/",
     },
@@ -72,7 +78,7 @@ function HomePage({ isDark }) {
         </div>
       </div>
       <div className="text__portion">
-        <h2 className="text__portion__header"> WEB APPLICATION</h2>
+        <h2 className="text__portion__header">{item.title}</h2>
         <p>{item.text}</p>
         <div className="slide__button">
           <a href={item.view}>See Demo</a>
