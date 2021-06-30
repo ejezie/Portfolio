@@ -7,8 +7,8 @@ import screen from "../images/code.gif";
 import resume from "../assets/resume.pdf";
 import Slide from "../components/Slide";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Thumbs } from "swiper";
-import gsap from "gsap";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import { gsap, TimelineLite, Power2 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "swiper/swiper-bundle.css";
 import mewzik from "../images/mewzik.png";
@@ -18,13 +18,109 @@ import port from "../images/port.png";
 import dora from "../images/dora.png";
 import movies from "../images/movies.png";
 
-SwiperCore.use([Navigation, Pagination, Thumbs]);
+gsap.registerPlugin(ScrollTrigger);
+
+SwiperCore.use([Navigation, Pagination]);
 
 function HomePage({ isDark }) {
-  useEffect(() => {
-    main();
-  });
+  let t1 = new TimelineLite({ delay: 1 });
 
+  useEffect(() => {
+    t1.from(
+      ".home__image",
+      {
+        y: 65,
+        opacity: 0,
+        ease: Power2.easeIn,
+        delay: 0,
+        duration: 1,
+      },
+      "Start"
+    );
+    t1.from(
+      ".home__text",
+      {
+        y: 65,
+        opacity: 0,
+        ease: Power2.easeIn,
+        delay: 0.5,
+        duration: 1,
+      },
+      "Start"
+    );
+    t1.from(
+      ".contact__home",
+      {
+        y: 65,
+        opacity: 0.5,
+        ease: Power2.easeIn,
+        delay: 1,
+        duration: 1.5,
+      },
+      "Start"
+    );
+    t1.from(
+      ".scroll",
+      {
+        y: 65,
+        opacity: 0,
+        ease: Power2.easeIn,
+        delay: 1.5,
+        duration: 2,
+      },
+      "Start"
+    );
+    gsap.from(".about", {
+      y: 65,
+      opacity: 0,
+      ease: Power2.easeIn,
+      delay: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".about",
+      },
+    });
+    gsap.from(".skills", {
+      y: 65,
+      opacity: 0,
+      ease: Power2.easeIn,
+      delay: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".skills",
+      },
+    });
+    gsap.from(".portfolio", {
+      y: 65,
+      opacity: 0,
+      ease: Power2.easeIn,
+      delay: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".portfolio",
+      },
+    });
+    gsap.from(".blog", {
+      y: 65,
+      opacity: 0,
+      ease: Power2.easeIn,
+      delay: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".blog",
+      },
+    });
+    gsap.from(".contact", {
+      y: 65,
+      opacity: 0,
+      ease: Power2.easeIn,
+      delay: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".contact",
+      },
+    });
+  }, []);
   const items = [
     {
       name: mewzik,
@@ -86,42 +182,12 @@ function HomePage({ isDark }) {
       </div>
     </SwiperSlide>
   ));
-  const [visible, setVisible] = useState(false);
-  // const [aboutAnim, setaboutAnim] = useState(false);
-  function main() {
-    const animsOne = document.querySelector(".animOne");
-    const aboutAnim = document.querySelector(".aboutAnim");
-    // const aboutAnim = document.querySelector(".aboutAnim");
-    let options = {
-      rootMargin: "-200px",
-    };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0) {
-          console.log(entry.target);
-          setVisible(entry.isIntersecting);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-    // animsOne.forEach((animOne) => {
-
-    // });
-    observer.observe(animsOne);
-    observer.observe(aboutAnim);
-  }
 
   return (
     <div>
       <div className="home__wrap" id="home">
-        <div className="home__content animOne">
-          <div
-            className="home__text"
-            // data-delay="1s"
-            style={{
-              transform: `${visible && "translateY(0px)"}`,
-              opacity: `${visible && "1"}`,
-            }}>
+        <div className="home__content">
+          <div className="home__text">
             <h2>Hi, I AM DARRYL </h2>
             <p className="describe__p">
               An enthusiatic frontend developer with a good eye for simple
@@ -134,51 +200,29 @@ function HomePage({ isDark }) {
               className="contact__home">
               Contact me<i class="fal fa-paper-plane sendt"></i>
             </Link>
-            <Link
-              to="about"
-              smooth={true}
-              duration={1000}
-              className="scroll appear shift__up"
-              data-delay="1.5s">
+            <Link to="about" smooth={true} duration={1000} className="scroll">
               <i class="fas fa-mouse mouse"></i>
               <p className="scroll__p">scroll</p>
               <i class="fas fa-long-arrow-alt-down arrow"></i>
             </Link>
           </div>
-          <div
-            className="home__image"
-            // data-delay="0.5s"
-            style={{
-              transform: `${visible && "translateY(0px)"}`,
-              opacity: `${visible && "1"}`,
-            }}>
+          <div className="home__image">
             <img src={me} className="image__border" alt="Ejezie" />
           </div>
         </div>
       </div>
       {/*  */}
-      <div className="about aboutAnim" id="about">
+      <div className="about" id="about">
         <div className="about__wrap">
           <div className="about__title appear">
             <Title title={"About Me"} span={"About me"} />
           </div>
           <div className="about__content">
-            <div
-              className="about__images"
-              style={{
-                transform: `${visible && "translateY(0px)"}`,
-                opacity: `${visible && "1"}`,
-              }}>
+            <div className="about__images">
               <img src={laptop} alt="laptop" className="image__laptop" />
               <img src={screen} alt="screen" className="screen__content" />
             </div>
-            <div
-              className="description__wrapper"
-              style={{
-                transform: `${visible && "translateY(0px)"}`,
-                opacity: `${visible && "1"}`,
-              }}
-              data-delay="1s">
+            <div className="description__wrapper">
               <h3>MY INTRODUCTION</h3>
               <p className="description">
                 I am a web developer with knowledge and experience in making
@@ -361,7 +405,7 @@ function HomePage({ isDark }) {
         </div>
       </div>
       {/*  */}
-      <div className="contact appear" id="contact">
+      <div className="contact" id="contact">
         <div className="contact__title">
           <Title title={"Contact"} span={"Contact"} />
         </div>

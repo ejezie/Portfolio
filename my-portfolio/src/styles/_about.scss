@@ -16,10 +16,7 @@
       .about__images {
         position: relative;
         display: flex;
-        transform: translateY(65px);
-        opacity: 0;
         position: relative;
-        transition: all 1s 1s ease-in;
         .image__laptop {
           position: relative;
           top: 0;
@@ -51,9 +48,6 @@
         align-items: center;
         justify-content: center;
         padding: 5px;
-        transition: all 1s ease-in;
-        transform: translateY(65px);
-        opacity: 0;
         h3 {
           margin-bottom: 10px;
         }

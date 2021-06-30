@@ -23,9 +23,6 @@ $hover-color: #4f5fa8;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transform: translateY(65px);
-      opacity: 0;
-      transition: all 1s 1s ease-in;
       h2 {
         font-size: 3.5rem;
         @media (max-width: 1100px) {
@@ -33,6 +30,7 @@ $hover-color: #4f5fa8;
         }
         @media (max-width: 730px) {
           font-size: 2rem;
+          margin-top: 10%;
         }
       }
       .contact__home {
@@ -97,9 +95,6 @@ $hover-color: #4f5fa8;
     .home__image {
       margin-bottom: 0px;
       position: relative;
-      transition: all 1s ease-in;
-      transform: translateY(65px);
-      opacity: 0;
       @media (max-width: 1000px) {
         margin-right: 50px;
       }
