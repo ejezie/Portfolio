@@ -434,7 +434,10 @@ function HomePage({ isDark }) {
                 </div>
               </div>
             </div>
-            <form className="contact__form" action="">
+            <form
+              className="contact__form"
+              action="https//formspree.io/f/mjvjooov"
+              method="POST">
               <div className="name__email">
                 <div className="contact__content" id="contact__content1">
                   <label htmlFor="">Name</label>
@@ -458,9 +461,9 @@ function HomePage({ isDark }) {
                   cols="30"
                   rows="7"></textarea>
               </div>
-              <a href="https://gmail.com" className="contact__button">
+              <button className="contact__button">
                 Send Message <i class="fal fa-paper-plane send"></i>
-              </a>
+              </button>
             </form>
           </div>
         </div>
